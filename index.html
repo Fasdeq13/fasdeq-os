@@ -13,6 +13,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 ui-sans-serif,
 a{color:var(--ac)}
 header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 28px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
 .logo{font-weight:800;font-size:18px;letter-spacing:-.01em}
+.hl{display:flex;align-items:center;gap:20px}
+.src{font-weight:600;font-size:14px;color:var(--mut);text-decoration:none}
+.src:hover{color:var(--ac)}
 .lang{display:flex;gap:4px;padding:3px;border:1px solid var(--bd);border-radius:999px;background:var(--card)}
 .lang button{border:0;background:none;color:var(--mut);font:600 13px inherit;padding:5px 12px;border-radius:999px;cursor:pointer}
 .lang button.on{background:var(--ac);color:var(--acf)}
@@ -51,7 +54,7 @@ footer{text-align:center;color:var(--mut);padding:0 28px 48px;font-size:14px}
 </head>
 <body>
 <header>
-<span class="logo">FasdeqOS</span>
+<div class="hl"><span class="logo">FasdeqOS</span><a class="src" href="https://github.com/Fasdeq13/fasdeqOS/tree/main" data-t="src"></a></div>
 <div class="lang"><button data-l="en">EN</button><button data-l="ru">RU</button><button data-l="uk">UK</button><button data-l="zh">中文</button></div>
 </header>
 <div class="hero">
@@ -108,23 +111,22 @@ pkg upgrade
 pkg uninstall firefox</code></pre>
 </section>
 <section id="migrate"><h2 data-t="t5"></h2><div data-t="b5"></div>
-<pre><code>curl -fsSL MIGRATE_LINK -o fasdeqos-migrate
-export FASDEQOS_PAYLOAD_URL=PAYLOAD_LINK
+<pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
 sudo -E bash fasdeqos-migrate
 sudo -E bash fasdeqos-migrate --no-backup --yes</code></pre>
+<p><a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" data-t="view"></a></p>
 </section>
 <section id="help"><h2 data-t="t6"></h2><div data-t="b6"></div>
-<pre><code>fasdeqos_bin=1</code></pre>
 </section>
 </main>
 </div>
-<footer data-t="f"></footer>
+<footer><span data-t="f"></span> <a href="https://github.com/Fasdeq13/fasdeqOS/tree/main">GitHub</a></footer>
 <script>
 const T={
 en:{n1:"Overview",n2:"Install",n3:"Manual install",n4:"Packages",n5:"Migration",n6:"Help",
 h:"Arch underneath. A Mac-style layout on top.",
 sub:"FasdeqOS is built on Arch Linux. System files live in /System, apps are folders in /Applications, your files are in /Users.",
-dl:"Download ISO",mg:"Migrate from Arch",w1:"Operating system",w2:"Apps you can delete",w3:"Shared settings",w4:"Your files",w5:"Disks",
+dl:"Download ISO",src:"Source code",view:"View the script on GitHub",mg:"Migrate from Arch",w1:"Operating system",w2:"Apps you can delete",w3:"Shared settings",w4:"Your files",w5:"Disks",
 t1:"Overview",
 b1:"<p>FasdeqOS keeps the Arch kernel, drivers and systemd, and changes everything above them.</p><ul><li><b>Layout.</b> /System, /Applications, /Library, /Users and /Volumes. Classic folders such as /usr and /etc are hidden.</li><li><b>Disk.</b> One btrfs filesystem with a volume for each folder, like APFS.</li><li><b>Tools.</b> glibc for apps and musl for guests. BSD utilities (chimerautils) instead of GNU. fish is the shell.</li><li><b>Apps.</b> Every app is a folder you can delete, such as Firefox.pkg. The pkg command manages them.</li></ul>",
 t2:"Install",
@@ -137,12 +139,12 @@ b4:"<p>The <code>pkg</code> command works like Homebrew and uses pacman undernea
 t5:"Migration",
 b5:"<p>The script moves an installed Arch, Manjaro or CachyOS system into the FasdeqOS layout on the same disk.</p><ul><li><b>Needs:</b> an Arch-based system, a btrfs root, UEFI, and root rights. Other systems stop with an error.</li><li><b>Volumes.</b> Missing btrfs volumes are created. Files are cloned, so no extra space is used.</li><li><b>Without backup (recommended).</b> GNU utilities are replaced by chimerautils, apps and games move into /Applications, pacman is replaced by pkg, and the old system is deleted after the first good boot.</li><li><b>With backup.</b> Everything is copied into /Users and the new layout. The old system stays as it was.</li></ul>",
 t6:"Help",
-b6:"<ul><li><b>No network in a virtual machine.</b> Add a network adapter to the machine. The installer shows diagnostics if there is no connection.</li><li><b>USB does not boot.</b> Write the ISO in DD mode and turn Secure Boot off.</li><li><b>Steam and Wine need /bin.</b> Add this to the kernel command line to mount it:</li></ul>",
+b6:"<ul><li><b>No network in a virtual machine.</b> Add a network adapter to the machine. The installer shows diagnostics if there is no connection.</li><li><b>USB does not boot.</b> Write the ISO in DD mode and turn Secure Boot off.</li><li><b>Steam and Wine.</b> A minimal /bin with only sh, bash, env and login is provided for them.</li></ul>",
 f:"FasdeqOS. Built on Arch Linux."},
 ru:{n1:"Обзор",n2:"Установка",n3:"Ручная установка",n4:"Пакеты",n5:"Миграция",n6:"Помощь",
 h:"Внутри Arch. Снаружи структура как в Mac.",
 sub:"FasdeqOS построена на Arch Linux. Системные файлы лежат в /System, приложения это папки в /Applications, ваши файлы в /Users.",
-dl:"Скачать ISO",mg:"Перейти с Arch",w1:"Операционная система",w2:"Приложения, которые можно удалить",w3:"Общие настройки",w4:"Ваши файлы",w5:"Диски",
+dl:"Скачать ISO",src:"Исходный код",view:"Скрипт на GitHub",mg:"Перейти с Arch",w1:"Операционная система",w2:"Приложения, которые можно удалить",w3:"Общие настройки",w4:"Ваши файлы",w5:"Диски",
 t1:"Обзор",
 b1:"<p>FasdeqOS сохраняет ядро, драйверы и systemd от Arch, а всё, что выше, меняет.</p><ul><li><b>Структура.</b> /System, /Applications, /Library, /Users и /Volumes. Привычные папки вроде /usr и /etc скрыты.</li><li><b>Диск.</b> Одна файловая система btrfs, по тому на каждую папку, как в APFS.</li><li><b>Утилиты.</b> glibc для приложений и musl для гостевых. Утилиты BSD (chimerautils) вместо GNU. Оболочка fish.</li><li><b>Приложения.</b> Каждое приложение это папка, которую можно удалить, например Firefox.pkg. Ими управляет команда pkg.</li></ul>",
 t2:"Установка",
@@ -155,12 +157,12 @@ b4:"<p>Команда <code>pkg</code> работает как Homebrew, а вн
 t5:"Миграция",
 b5:"<p>Скрипт переносит установленный Arch, Manjaro или CachyOS в структуру FasdeqOS на том же диске.</p><ul><li><b>Требуется:</b> система на базе Arch, корень на btrfs, UEFI и права root. На других системах скрипт остановится с ошибкой.</li><li><b>Тома.</b> Недостающие тома btrfs создаются. Файлы клонируются, поэтому место не тратится.</li><li><b>Без бэкапа (рекомендуется).</b> GNU-утилиты заменяются на chimerautils, приложения и игры переезжают в /Applications, pacman заменяется на pkg, старая система удаляется после первой удачной загрузки.</li><li><b>С бэкапом.</b> Всё копируется в /Users и новую структуру. Старая система остаётся как была.</li></ul>",
 t6:"Помощь",
-b6:"<ul><li><b>Нет сети в виртуальной машине.</b> Добавьте машине сетевой адаптер. Установщик покажет диагностику, если связи нет.</li><li><b>Флешка не загружается.</b> Запишите ISO в режиме DD и отключите Secure Boot.</li><li><b>Steam и Wine требуют /bin.</b> Добавьте в параметры ядра, чтобы он смонтировался:</li></ul>",
+b6:"<ul><li><b>Нет сети в виртуальной машине.</b> Добавьте машине сетевой адаптер. Установщик покажет диагностику, если связи нет.</li><li><b>Флешка не загружается.</b> Запишите ISO в режиме DD и отключите Secure Boot.</li><li><b>Steam и Wine.</b> Для них предусмотрен минимальный /bin: только sh, bash, env и login.</li></ul>",
 f:"FasdeqOS. Построена на Arch Linux."},
 uk:{n1:"Огляд",n2:"Встановлення",n3:"Ручне встановлення",n4:"Пакети",n5:"Міграція",n6:"Допомога",
 h:"Всередині Arch. Зовні структура як у Mac.",
 sub:"FasdeqOS побудована на Arch Linux. Системні файли лежать у /System, застосунки це теки в /Applications, ваші файли в /Users.",
-dl:"Завантажити ISO",mg:"Перейти з Arch",w1:"Операційна система",w2:"Застосунки, які можна видалити",w3:"Спільні налаштування",w4:"Ваші файли",w5:"Диски",
+dl:"Завантажити ISO",src:"Вихідний код",view:"Скрипт на GitHub",mg:"Перейти з Arch",w1:"Операційна система",w2:"Застосунки, які можна видалити",w3:"Спільні налаштування",w4:"Ваші файли",w5:"Диски",
 t1:"Огляд",
 b1:"<p>FasdeqOS зберігає ядро, драйвери та systemd від Arch, а все, що вище, змінює.</p><ul><li><b>Структура.</b> /System, /Applications, /Library, /Users і /Volumes. Звичні теки на кшталт /usr та /etc приховані.</li><li><b>Диск.</b> Одна файлова система btrfs, по тому на кожну теку, як в APFS.</li><li><b>Утиліти.</b> glibc для застосунків і musl для гостьових. Утиліти BSD (chimerautils) замість GNU. Оболонка fish.</li><li><b>Застосунки.</b> Кожен застосунок це тека, яку можна видалити, наприклад Firefox.pkg. Ними керує команда pkg.</li></ul>",
 t2:"Встановлення",
@@ -173,12 +175,12 @@ b4:"<p>Команда <code>pkg</code> працює як Homebrew, а всере
 t5:"Міграція",
 b5:"<p>Скрипт переносить встановлений Arch, Manjaro або CachyOS у структуру FasdeqOS на тому ж диску.</p><ul><li><b>Потрібно:</b> система на базі Arch, корінь на btrfs, UEFI і права root. На інших системах скрипт зупиниться з помилкою.</li><li><b>Томи.</b> Відсутні томи btrfs створюються. Файли клонуються, тож місце не витрачається.</li><li><b>Без бекапу (рекомендовано).</b> GNU-утиліти замінюються на chimerautils, застосунки та ігри переїжджають в /Applications, pacman замінюється на pkg, стара система видаляється після першого вдалого завантаження.</li><li><b>З бекапом.</b> Усе копіюється в /Users і нову структуру. Стара система лишається як була.</li></ul>",
 t6:"Допомога",
-b6:"<ul><li><b>Немає мережі у віртуальній машині.</b> Додайте машині мережевий адаптер. Встановлювач покаже діагностику, якщо зв'язку немає.</li><li><b>Флешка не завантажується.</b> Запишіть ISO в режимі DD і вимкніть Secure Boot.</li><li><b>Steam і Wine потребують /bin.</b> Додайте до параметрів ядра, щоб він змонтувався:</li></ul>",
+b6:"<ul><li><b>Немає мережі у віртуальній машині.</b> Додайте машині мережевий адаптер. Встановлювач покаже діагностику, якщо зв'язку немає.</li><li><b>Флешка не завантажується.</b> Запишіть ISO в режимі DD і вимкніть Secure Boot.</li><li><b>Steam і Wine.</b> Для них передбачено мінімальний /bin: лише sh, bash, env і login.</li></ul>",
 f:"FasdeqOS. Побудована на Arch Linux."},
 zh:{n1:"概览",n2:"安装",n3:"手动安装",n4:"软件包",n5:"迁移",n6:"帮助",
 h:"底层是 Arch，外观是 Mac 式目录结构。",
 sub:"FasdeqOS 基于 Arch Linux。系统文件在 /System，应用是 /Applications 里的文件夹，你的文件在 /Users。",
-dl:"下载 ISO",mg:"从 Arch 迁移",w1:"操作系统",w2:"可以删除的应用",w3:"共享设置",w4:"你的文件",w5:"磁盘",
+dl:"下载 ISO",src:"源代码",view:"在 GitHub 查看脚本",mg:"从 Arch 迁移",w1:"操作系统",w2:"可以删除的应用",w3:"共享设置",w4:"你的文件",w5:"磁盘",
 t1:"概览",
 b1:"<p>FasdeqOS 保留 Arch 的内核、驱动和 systemd，并改变它们之上的一切。</p><ul><li><b>目录结构。</b>/System、/Applications、/Library、/Users 和 /Volumes。/usr、/etc 等传统目录被隐藏。</li><li><b>磁盘。</b>一个 btrfs 文件系统，每个目录对应一个卷，类似 APFS。</li><li><b>工具。</b>应用使用 glibc，客体程序使用 musl。用 BSD 工具（chimerautils）取代 GNU。默认 shell 是 fish。</li><li><b>应用。</b>每个应用都是可以删除的文件夹，例如 Firefox.pkg，由 pkg 命令管理。</li></ul>",
 t2:"安装",
@@ -191,7 +193,7 @@ b4:"<p><code>pkg</code> 命令的用法类似 Homebrew，底层使用 pacman。�
 t5:"迁移",
 b5:"<p>该脚本把已安装的 Arch、Manjaro 或 CachyOS 在同一块磁盘上迁移到 FasdeqOS 的目录结构。</p><ul><li><b>要求：</b>基于 Arch 的系统、btrfs 根分区、UEFI 和 root 权限。其他系统会报错并停止。</li><li><b>卷。</b>缺少的 btrfs 卷会被创建。文件通过克隆复制，不占用额外空间。</li><li><b>不备份（推荐）。</b>GNU 工具被 chimerautils 取代，应用和游戏移入 /Applications，pacman 被 pkg 取代，首次成功启动后删除旧系统。</li><li><b>备份。</b>所有内容复制到 /Users 和新结构，旧系统保持原样。</li></ul>",
 t6:"帮助",
-b6:"<ul><li><b>虚拟机没有网络。</b>请给虚拟机添加网络适配器。没有连接时安装程序会显示诊断信息。</li><li><b>U 盘无法启动。</b>用 DD 模式写入 ISO，并关闭 Secure Boot。</li><li><b>Steam 和 Wine 需要 /bin。</b>把下面的参数加入内核命令行即可挂载：</li></ul>",
+b6:"<ul><li><b>虚拟机没有网络。</b>请给虚拟机添加网络适配器。没有连接时安装程序会显示诊断信息。</li><li><b>U 盘无法启动。</b>用 DD 模式写入 ISO，并关闭 Secure Boot。</li><li><b>Steam 和 Wine。</b>为它们提供了最小的 /bin，只含 sh、bash、env 和 login。</li></ul>",
 f:"FasdeqOS，基于 Arch Linux。"}
 };
 function set(l){document.documentElement.lang=l;document.querySelectorAll("[data-t]").forEach(e=>{e.innerHTML=T[l][e.dataset.t]});document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));try{localStorage.setItem("l",l)}catch(e){}}
