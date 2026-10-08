@@ -56,14 +56,14 @@ footer{text-align:center;color:var(--mut);padding:0 28px 48px;font-size:14px}
 </head>
 <body>
 <header>
-<div class="hl"><span class="logo">FasdeqOS</span><a class="src" href="https://github.com/Fasdeq13/fasdeqOS/tree/main" data-t="src"></a></div>
-<div class="lang"><button data-l="en">EN</button><button data-l="ru">RU</button><button data-l="uk">UK</button><button data-l="zh">中文</button></div>
+<div class="hl"><span class="logo">FasdeqOS</span><a class="src" href="handbook.html" data-t="hb" style="background:var(--ac);color:var(--acf);padding:4px 12px;border-radius:8px;font-weight:700;display:inline-flex;align-items:center;gap:6px">📖 Handbook</a><a class="src" href="https://github.com/Fasdeq13/fasdeqOS/tree/main" data-t="src">GitHub</a></div>
+<div class="lang"><button data-l="en">EN</button><button data-l="ru">RU</button><button data-l="it">IT</button><button data-l="uk">UK</button><button data-l="zh">中文</button></div>
 </header>
 <div class="hero">
 <div>
 <h1 data-t="h"></h1>
 <p class="sub" data-t="sub"></p>
-<div class="cta"><a class="btn p" href="ISO_LINK" data-t="dl"></a><a class="btn" href="#migrate" data-t="mg"></a></div>
+<div class="cta"><a class="btn p" href="handbook.html" data-t="hb_btn">📖 Handbook / Wiki</a><a class="btn" href="ISO_LINK" data-t="dl"></a><a class="btn" href="#migrate" data-t="mg"></a></div>
 </div>
 <div class="win">
 <div class="bar"><i></i><i></i><i></i><span>FasdeqOS</span></div>
@@ -80,10 +80,9 @@ footer{text-align:center;color:var(--mut);padding:0 28px 48px;font-size:14px}
 </div>
 <div class="wrap">
 <nav class="side">
-<a href="#overview" data-t="n1"></a><a href="#install" data-t="n2"></a><a href="#manual" data-t="n3"></a><a href="#packages" data-t="n4"></a><a href="#migrate" data-t="n5"></a><a href="#help" data-t="n6"></a>
+<a href="handbook.html" style="color:var(--ac);font-weight:700" data-t="hb_side">📖 Handbook</a><a href="#install" data-t="n2"></a><a href="#manual" data-t="n3"></a><a href="#packages" data-t="n4"></a><a href="#migrate" data-t="n5"></a><a href="#help" data-t="n6"></a>
 </nav>
 <main>
-<section id="overview"><h2 data-t="t1"></h2><div data-t="b1"></div></section>
 <section id="install"><h2 data-t="t2"></h2><div data-t="b2"></div></section>
 <section id="manual"><h2 data-t="t3"></h2><div data-t="b3"></div>
 <pre><code>sgdisk --zap-all /dev/sdX
@@ -137,12 +136,10 @@ sudo -E bash fasdeqos-migrate </code></pre>
 <footer><span data-t="f"></span> <a href="https://github.com/Fasdeq13/fasdeqOS/tree/main">GitHub</a></footer>
 <script>
 const T={
-en:{n1:"Overview",n2:"Install",n3:"Manual install",n4:"Packages",n5:"Migration",n6:"Help",
+en:{hb:"📖 Handbook",hb_btn:"📖 Handbook / Wiki",hb_side:"📖 Handbook",n2:"Install",n3:"Manual install",n4:"Packages",n5:"Migration",n6:"Help",
 h:"Arch underneath. A Mac-style layout on top.",
 sub:"FasdeqOS is built on Arch Linux. System files live in /System, apps are folders in /Applications, your files are in /Users.",
 dl:"Download ISO",src:"Source code",view:"View the script on GitHub",mg:"Migrate from Arch",w1:"Operating system",w2:"Apps & containers",w3:"Shared settings",w4:"Your files",w5:"Disks",w6:"Bootloader & kernels",w7:"Superuser home",
-t1:"Overview",
-b1:"<p>FasdeqOS keeps the Arch kernel, drivers and systemd, and changes everything above them.</p><ul><li><b>Layout.</b> /Applications, /boot, /Library, /root, /System, /Users and /Volumes. Classic folders such as /usr and /etc are hidden.</li><li><b>Disk.</b> One btrfs filesystem with a volume for each folder, like APFS.</li><li><b>Tools.</b> glibc for apps and musl for guests. Switchable BSD utilities (chimerautils) or busybox via <code>pkg change-int</code>. fish is the shell.</li><li><b>Apps & System.</b> The <code>pkg</code> command manages apps (heavy apps run in isolated containers), repositories, desktops, and kernels.</li></ul>",
 t2:"Install",
 b2:"<ol><li>Download the ISO and write it to a USB drive in DD mode, or attach it to a virtual machine with 6 GB of RAM, a network adapter and a 40 GB disk.</li><li>Boot it. The installer starts on its own.</li><li>Move with ↑ ↓ or W S. Switch buttons with ← → or A D. Press Enter to confirm and Space to tick.</li><li>Answer the questions: language, keyboard layouts and switch shortcut, time zone, mirror, desktop (KDE Plasma or GNOME), apps, disk and account.</li><li>Check the summary, choose Continue, then Install. Reboot when asked.</li></ol><p>Disk modes: use free space on a disk, erase one disk, or erase all disks into one pool. Graphics drivers are chosen for you.</p>",
 t3:"Manual install",
@@ -155,12 +152,10 @@ b5:"<p>The script moves an installed Arch, Manjaro or CachyOS system into the Fa
 t6:"Help",
 b6:"<ul><li><b>No network in a virtual machine.</b> Add a network adapter to the machine. The installer shows diagnostics if there is no connection.</li><li><b>USB does not boot.</b> Write the ISO in DD mode and turn Secure Boot off.</li><li><b>Steam and Wine.</b> A minimal /bin with only sh, bash, env and login is provided for them.</li></ul>",
 f:"FasdeqOS. Built on Arch Linux."},
-ru:{n1:"Обзор",n2:"Установка",n3:"Ручная установка",n4:"Пакеты",n5:"Миграция",n6:"Помощь",
+ru:{hb:"📖 Хэндбук",hb_btn:"📖 Хэндбук / Вики",hb_side:"📖 Хэндбук",n2:"Установка",n3:"Ручная установка",n4:"Пакеты",n5:"Миграция",n6:"Помощь",
 h:"Внутри Arch. Снаружи структура как в Mac.",
 sub:"FasdeqOS построена на Arch Linux. Системные файлы лежат в /System, приложения это папки в /Applications, ваши файлы в /Users.",
 dl:"Скачать ISO",src:"Исходный код",view:"Скрипт на GitHub",mg:"Перейти с Arch",w1:"Операционная система",w2:"Приложения и контейнеры",w3:"Общие настройки",w4:"Ваши файлы",w5:"Диски",w6:"Загрузчик и ядра",w7:"Каталог root",
-t1:"Обзор",
-b1:"<p>FasdeqOS сохраняет ядро, драйверы и systemd от Arch, а всё, что выше, меняет.</p><ul><li><b>Структура.</b> /Applications, /boot, /Library, /root, /System, /Users и /Volumes. Привычные папки вроде /usr и /etc скрыты.</li><li><b>Диск.</b> Одна файловая система btrfs, по тому на каждую папку, как в APFS.</li><li><b>Утилиты.</b> glibc для приложений и musl для гостевых. Переключаемые утилиты BSD (chimerautils) или busybox через <code>pkg change-int</code>. Оболочка fish.</li><li><b>Приложения и система.</b> Команда <code>pkg</code> управляет приложениями (тяжёлые изолируются в контейнерах), репозиториями, рабочими столами и ядрами.</li></ul>",
 t2:"Установка",
 b2:"<ol><li>Скачайте ISO и запишите на флешку в режиме DD или подключите к виртуальной машине: 6 ГБ памяти, сетевой адаптер и диск 40 ГБ.</li><li>Загрузитесь. Установщик запустится сам.</li><li>Двигайтесь клавишами ↑ ↓ или W S, кнопки переключайте ← → или A D. Enter подтверждает, пробел отмечает.</li><li>Ответьте на вопросы: язык, раскладки клавиатуры и сочетание переключения, часовой пояс, зеркало, оболочка (KDE Plasma или GNOME), приложения, диск и учётная запись.</li><li>Проверьте итог, выберите Continue, затем Install. Перезагрузитесь, когда попросят.</li></ol><p>Режимы диска: свободное место на диске, стереть один диск или стереть все диски в один пул. Драйверы видеокарты выбираются автоматически.</p>",
 t3:"Ручная установка",
@@ -173,12 +168,26 @@ b5:"<p>Скрипт переносит установленный Arch, Manjaro 
 t6:"Помощь",
 b6:"<ul><li><b>Нет сети в виртуальной машине.</b> Добавьте машине сетевой адаптер. Установщик покажет диагностику, если связи нет.</li><li><b>Флешка не загружается.</b> Запишите ISO в режиме DD и отключите Secure Boot.</li><li><b>Steam и Wine.</b> Для них предусмотрен минимальный /bin: только sh, bash, env и login.</li></ul>",
 f:"FasdeqOS. Построена на Arch Linux."},
-uk:{n1:"Огляд",n2:"Встановлення",n3:"Ручне встановлення",n4:"Пакети",n5:"Міграція",n6:"Допомога",
+it:{hb:"📖 Guida",hb_btn:"📖 Guida / Wiki",hb_side:"📖 Guida",n2:"Installazione",n3:"Installazione manuale",n4:"Pacchetti",n5:"Migrazione",n6:"Aiuto",
+h:"Arch sotto il cofano. Struttura in stile Mac in superficie.",
+sub:"FasdeqOS è basato su Arch Linux. I file di sistema vivono in /System, le app in /Applications, i tuoi file in /Users.",
+dl:"Scarica ISO",src:"Codice sorgente",view:"Vedi lo script su GitHub",mg:"Migra da Arch",w1:"Sistema operativo",w2:"App e container",w3:"Impostazioni condivise",w4:"I tuoi file",w5:"Dischi",w6:"Bootloader e kernel",w7:"Cartella root",
+t2:"Installazione",
+b2:"<ol><li>Scarica l'ISO e scrivila su una chiavetta USB in modalità DD, oppure avviala in una macchina virtuale con 6 GB di RAM, scheda di rete e 40 GB di disco.</li><li>Avvia il sistema. L'installer si aprirà automaticamente.</li><li>Naviga con ↑ ↓ o W S, cambia pulsante con ← → o A D. Invio per confermare e Spazio per selezionare.</li><li>Rispondi alle domande: lingua, tastiera, fuso orario, mirror, ambiente desktop (KDE Plasma o GNOME), applicazioni, disco e account.</li><li>Verifica il riepilogo, premi Continua, poi Installa. Riavvia quando richiesto.</li></ol>",
+t3:"Installazione manuale",
+b3:"<p>Questi sono i passaggi eseguiti dall'installer. Sostituisci <code>/dev/sdX</code> con il tuo disco e opera come root nel sistema live.</p>",
+b3b:"<p>Successivamente esegui <code>arch-chroot</code> nella cartella stage per configurare locale, utenti, hook initramfs <code>fasdeqos-disk</code> e GRUB:</p>",
+t4:"Pacchetti",
+b4:"<p>Il comando <code>pkg</code> gestisce applicazioni, repository, ambienti desktop e kernel. Utilizza pacman sotto il cofano.</p><ul><li><code>pkg install &lt;pacchetto|file&gt;</code> installa le app (le app pesanti vengono isolate in container).</li><li><code>pkg uninstall</code> e <code>pkg list</code> rimuovono ed elencano le applicazioni installate.</li><li><code>pkg search</code>, <code>pkg info</code>, <code>pkg update</code>, <code>pkg upgrade</code> e <code>pkg cleanup</code> mantengono pacchetti e cache.</li><li><code>pkg kernel [list|use &lt;nome&gt;]</code> visualizza o cambia il kernel attivo al volo.</li><li><code>pkg change-desktop &lt;nome&gt;</code> cambia l'ambiente desktop (KDE Plasma, GNOME, ecc.).</li><li><code>pkg change-int &lt;nome&gt;</code> cambia le utility base tra BSD (chimerautils) e busybox.</li><li><code>pkg list-repo</code>, <code>pkg add-repo</code>, <code>pkg remove-repo</code> gestiscono i repository aggiuntivi.</li><li><code>pkg sys &lt;argomenti pacman&gt;</code> esegue pacman direttamente sul volume di sistema.</li></ul>",
+t5:"Migrazione",
+b5:"<p>Lo script migra un'installazione Arch, Manjaro o CachyOS verso la struttura di FasdeqOS sullo stesso disco.</p><ul><li><b>Requisiti:</b> sistema basato su Arch, radice su btrfs, UEFI e privilegi di root.</li><li><b>Volumi.</b> I volumi btrfs mancanti vengono creati. I file vengono clonati tramite reflink, senza occupare spazio aggiuntivo.</li><li><b>Senza backup (consigliato).</b> Le utility GNU vengono sostituite da chimerautils, app e giochi passano a /Applications, pacman viene sostituito da pkg.</li><li><b>Con backup.</b> Tutto viene copiato in /Users e nella nuova struttura, lasciando intatto il vecchio sistema.</li></ul>",
+t6:"Aiuto",
+b6:"<ul><li><b>Nessuna rete nella VM:</b> Aggiungi una scheda di rete virtuale. L'installer mostrerà la diagnostica.</li><li><b>L'USB non si avvia:</b> Scrivi la ISO in modalità DD e disattiva Secure Boot.</li><li><b>Steam e Wine:</b> Viene fornita una /bin minimale con sh, bash, env e login.</li></ul>",
+f:"FasdeqOS. Basato su Arch Linux."},
+uk:{hb:"📖 Хендбук",hb_btn:"📖 Хендбук / Вікі",hb_side:"📖 Хендбук",n2:"Встановлення",n3:"Ручне встановлення",n4:"Пакети",n5:"Міграція",n6:"Допомога",
 h:"Всередині Arch. Зовні структура як у Mac.",
 sub:"FasdeqOS побудована на Arch Linux. Системні файли лежать у /System, застосунки це теки в /Applications, ваші файли в /Users.",
 dl:"Завантажити ISO",src:"Вихідний код",view:"Скрипт на GitHub",mg:"Перейти з Arch",w1:"Операційна система",w2:"Застосунки та контейнери",w3:"Спільні налаштування",w4:"Ваші файли",w5:"Диски",w6:"Завантажувач та ядра",w7:"Каталог root",
-t1:"Огляд",
-b1:"<p>FasdeqOS зберігає ядро, драйвери та systemd від Arch, а все, що вище, змінює.</p><ul><li><b>Структура.</b> /Applications, /boot, /Library, /root, /System, /Users і /Volumes. Звичні теки на кшталт /usr та /etc приховані.</li><li><b>Диск.</b> Одна файлова система btrfs, по тому на кожну теку, як в APFS.</li><li><b>Утиліти.</b> glibc для застосунків і musl для гостьових. Перемикання утиліт BSD (chimerautils) або busybox через <code>pkg change-int</code>. Оболонка fish.</li><li><b>Застосунки та система.</b> Команда <code>pkg</code> керує застосунками (важкі програми ізолюються в контейнерах), репозиторіями, стільничними середовищами та ядрами.</li></ul>",
 t2:"Встановлення",
 b2:"<ol><li>Завантажте ISO і запишіть на флешку в режимі DD або підключіть до віртуальної машини: 6 ГБ пам'яті, мережевий адаптер і диск 40 ГБ.</li><li>Завантажтеся. Встановлювач запуститься сам.</li><li>Рухайтеся клавішами ↑ ↓ або W S, кнопки перемикайте ← → або A D. Enter підтверджує, пробіл позначає.</li><li>Дайте відповіді: мова, розкладки клавіатури та комбінація перемикання, часовий пояс, дзеркало, оболонка (KDE Plasma або GNOME), застосунки, диск і обліковий запис.</li><li>Перевірте підсумок, оберіть Continue, потім Install. Перезавантажтеся, коли попросять.</li></ol><p>Режими диска: вільне місце на диску, стерти один диск або стерти всі диски в один пул. Драйвери відеокарти обираються автоматично.</p>",
 t3:"Ручне встановлення",
@@ -191,12 +200,10 @@ b5:"<p>Скрипт переносить встановлений Arch, Manjaro 
 t6:"Допомога",
 b6:"<ul><li><b>Немає мережі у віртуальній машині.</b> Додайте машині мережевий адаптер. Встановлювач покаже діагностику, якщо зв'язку немає.</li><li><b>Флешка не завантажується.</b> Запишіть ISO в режимі DD і вимкніть Secure Boot.</li><li><b>Steam і Wine.</b> Для них передбачено мінімальний /bin: лише sh, bash, env і login.</li></ul>",
 f:"FasdeqOS. Побудована на Arch Linux."},
-zh:{n1:"概览",n2:"安装",n3:"手动安装",n4:"软件包",n5:"迁移",n6:"帮助",
+zh:{hb:"📖 指南",hb_btn:"📖 指南 / 维基",hb_side:"📖 指南",n2:"安装",n3:"手动安装",n4:"软件包",n5:"迁移",n6:"帮助",
 h:"底层是 Arch，外观是 Mac 式目录结构。",
 sub:"FasdeqOS 基于 Arch Linux。系统文件在 /System，应用是 /Applications 里的文件夹，你的文件在 /Users。",
 dl:"下载 ISO",src:"源代码",view:"在 GitHub 查看脚本",mg:"从 Arch 迁移",w1:"操作系统",w2:"应用与容器",w3:"共享设置",w4:"你的文件",w5:"磁盘",w6:"引导与内核",w7:"Root 目录",
-t1:"概览",
-b1:"<p>FasdeqOS 保留 Arch 的内核、驱动和 systemd，并改变它们之上的一切。</p><ul><li><b>目录结构。</b>/Applications、/boot、/Library、/root、/System、/Users 和 /Volumes。/usr、/etc 等传统目录被隐藏。</li><li><b>磁盘。</b>一个 btrfs 文件系统，每个目录对应独立子卷，类似 APFS。</li><li><b>工具。</b>应用使用 glibc，客体程序使用 musl。支持通过 <code>pkg change-int</code> 随时切换 BSD 工具（chimerautils）或 busybox。默认 shell 是 fish。</li><li><b>应用与系统。</b><code>pkg</code> 命令管理应用（大型应用自动在容器中隔离运行）、软件源、桌面环境与内核。</li></ul>",
 t2:"安装",
 b2:"<ol><li>下载 ISO，用 DD 模式写入 U 盘，或挂载到虚拟机：6 GB 内存、网络适配器和 40 GB 磁盘。</li><li>启动后安装程序会自动运行。</li><li>用 ↑ ↓ 或 W S 移动，用 ← → 或 A D 切换按钮，Enter 确认，空格勾选。</li><li>回答问题：语言、键盘布局和切换快捷键、时区、镜像、桌面（KDE Plasma 或 GNOME）、应用、磁盘和账户。</li><li>检查摘要，选择 Continue，然后 Install。按提示重启。</li></ol><p>磁盘模式：使用磁盘剩余空间、清除一块磁盘，或清除所有磁盘合并为一个存储池。显卡驱动会自动选择。</p>",
 t3:"手动安装",
@@ -218,4 +225,3 @@ set(l);
 </script>
 </body>
 </html>
-
