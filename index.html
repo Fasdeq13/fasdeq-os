@@ -32,10 +32,12 @@ h1{font-size:clamp(34px,5vw,56px);line-height:1.08;letter-spacing:-.03em;margin:
 .bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
 .bar span{margin-left:8px;font-weight:600}
 .tree{list-style:none;margin:0;padding:10px}
-.tree li{display:flex;justify-content:space-between;gap:12px;padding:9px 12px;border-radius:9px;font-size:15px}
+.tree li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 12px;border-radius:9px;font-size:14.5px}
 .tree li:nth-child(odd){background:color-mix(in srgb,var(--ac) 7%,transparent)}
-.tree b{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
-.tree em{font-style:normal;color:var(--mut);font-size:14px}
+.tree li span{display:inline-flex;align-items:center;gap:8px}
+.tree svg{width:15px;height:15px;color:var(--ac);flex-shrink:0}
+.tree b{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px}
+.tree em{font-style:normal;color:var(--mut);font-size:13px}
 .wrap{max-width:1100px;margin:auto;padding:0 28px 80px;display:grid;grid-template-columns:210px 1fr;gap:36px}
 .side{position:sticky;top:84px;align-self:start;display:flex;flex-direction:column;gap:2px}
 .side a{padding:8px 12px;border-radius:9px;color:var(--mut);text-decoration:none;font-weight:600;border-left:3px solid transparent}
@@ -66,11 +68,13 @@ footer{text-align:center;color:var(--mut);padding:0 28px 48px;font-size:14px}
 <div class="win">
 <div class="bar"><i></i><i></i><i></i><span>FasdeqOS</span></div>
 <ul class="tree">
-<li><b>System</b><em data-t="w1"></em></li>
-<li><b>Applications</b><em data-t="w2"></em></li>
-<li><b>Library</b><em data-t="w3"></em></li>
-<li><b>Users</b><em data-t="w4"></em></li>
-<li><b>Volumes</b><em data-t="w5"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>Applications</b></span><em data-t="w2"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>boot</b></span><em data-t="w6"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>Library</b></span><em data-t="w3"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>root</b></span><em data-t="w7"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>System</b></span><em data-t="w1"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>Users</b></span><em data-t="w4"></em></li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><b>Volumes</b></span><em data-t="w5"></em></li>
 </ul>
 </div>
 </div>
@@ -105,10 +109,21 @@ mv /mnt/private/stage/root /mnt/private/var/root
 rm -rf /mnt/private/stage</code></pre>
 </section>
 <section id="packages"><h2 data-t="t4"></h2><div data-t="b4"></div>
-<pre><code>pkg install firefox
+<pre><code># Install apps (heavy ones go into containers)
+pkg install blender
 pkg list
 pkg upgrade
-pkg uninstall firefox</code></pre>
+
+# Kernels, desktop environments, and userland
+pkg kernel list
+pkg kernel use linux-cachyos
+pkg change-desktop gnome
+pkg change-int busybox
+
+# Repositories and system-level pacman
+pkg add-repo https://repo.example.com custom
+pkg sys -Syu
+pkg cleanup</code></pre>
 </section>
 <section id="migrate"><h2 data-t="t5"></h2><div data-t="b5"></div>
 <pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
@@ -125,16 +140,16 @@ const T={
 en:{n1:"Overview",n2:"Install",n3:"Manual install",n4:"Packages",n5:"Migration",n6:"Help",
 h:"Arch underneath. A Mac-style layout on top.",
 sub:"FasdeqOS is built on Arch Linux. System files live in /System, apps are folders in /Applications, your files are in /Users.",
-dl:"Download ISO",src:"Source code",view:"View the script on GitHub",mg:"Migrate from Arch",w1:"Operating system",w2:"Apps you can delete",w3:"Shared settings",w4:"Your files",w5:"Disks",
+dl:"Download ISO",src:"Source code",view:"View the script on GitHub",mg:"Migrate from Arch",w1:"Operating system",w2:"Apps & containers",w3:"Shared settings",w4:"Your files",w5:"Disks",w6:"Bootloader & kernels",w7:"Superuser home",
 t1:"Overview",
-b1:"<p>FasdeqOS keeps the Arch kernel, drivers and systemd, and changes everything above them.</p><ul><li><b>Layout.</b> /System, /Applications, /Library, /Users and /Volumes. Classic folders such as /usr and /etc are hidden.</li><li><b>Disk.</b> One btrfs filesystem with a volume for each folder, like APFS.</li><li><b>Tools.</b> glibc for apps and musl for guests. BSD utilities (chimerautils) instead of GNU. fish is the shell.</li><li><b>Apps.</b> Every app is a folder you can delete, such as Firefox.pkg. The pkg command manages them.</li></ul>",
+b1:"<p>FasdeqOS keeps the Arch kernel, drivers and systemd, and changes everything above them.</p><ul><li><b>Layout.</b> /Applications, /boot, /Library, /root, /System, /Users and /Volumes. Classic folders such as /usr and /etc are hidden.</li><li><b>Disk.</b> One btrfs filesystem with a volume for each folder, like APFS.</li><li><b>Tools.</b> glibc for apps and musl for guests. Switchable BSD utilities (chimerautils) or busybox via <code>pkg change-int</code>. fish is the shell.</li><li><b>Apps & System.</b> The <code>pkg</code> command manages apps (heavy apps run in isolated containers), repositories, desktops, and kernels.</li></ul>",
 t2:"Install",
 b2:"<ol><li>Download the ISO and write it to a USB drive in DD mode, or attach it to a virtual machine with 6 GB of RAM, a network adapter and a 40 GB disk.</li><li>Boot it. The installer starts on its own.</li><li>Move with ↑ ↓ or W S. Switch buttons with ← → or A D. Press Enter to confirm and Space to tick.</li><li>Answer the questions: language, keyboard layouts and switch shortcut, time zone, mirror, desktop (KDE Plasma or GNOME), apps, disk and account.</li><li>Check the summary, choose Continue, then Install. Reboot when asked.</li></ol><p>Disk modes: use free space on a disk, erase one disk, or erase all disks into one pool. Graphics drivers are chosen for you.</p>",
 t3:"Manual install",
 b3:"<p>These are the steps the installer runs. Replace <code>/dev/sdX</code> with your disk and work as root in the live system.</p>",
 b3b:"<p>Next, use <code>arch-chroot</code> on the stage folder to set the locale, users, the <code>fasdeqos-disk</code> initramfs hook and GRUB. Then move the files into the layout:</p>",
 t4:"Packages",
-b4:"<p>The <code>pkg</code> command works like Homebrew and uses pacman underneath. It installs apps into <code>/Applications</code> with their own dependencies.</p><ul><li><code>pkg install</code> adds an app. <code>pkg uninstall</code> removes it.</li><li><code>pkg list</code> shows apps. <code>pkg list --removed</code> shows apps you deleted by hand.</li><li><code>pkg search</code>, <code>pkg info</code>, <code>pkg update</code>, <code>pkg upgrade</code> and <code>pkg cleanup</code> do what they say.</li><li>If you delete an app folder, pkg notices and never brings it back. Install it again to restore it.</li></ul>",
+b4:"<p>The <code>pkg</code> command manages applications, repositories, desktop environments, and kernels. It uses pacman underneath.</p><ul><li><code>pkg install &lt;package|file&gt;</code> installs applications. Heavy applications are automatically isolated in containers.</li><li><code>pkg uninstall &lt;package&gt;</code> and <code>pkg list</code> remove and list installed applications.</li><li><code>pkg search &lt;text&gt;</code> and <code>pkg info &lt;package&gt;</code> search packages and view package details.</li><li><code>pkg update</code>, <code>pkg upgrade</code> and <code>pkg cleanup</code> refresh databases, upgrade the system, and clear caches.</li><li><code>pkg kernel [list|use &lt;name&gt;]</code> views available kernels or switches the active kernel.</li><li><code>pkg change-desktop &lt;name&gt;</code> switches the desktop environment (e.g. KDE Plasma or GNOME).</li><li><code>pkg change-int &lt;name&gt;</code> switches base utilities between chimerautils (BSD) and busybox.</li><li><code>pkg list-repo</code>, <code>pkg add-repo &lt;url&gt; [name]</code>, <code>pkg remove-repo &lt;name&gt;</code> manage extra repositories.</li><li><code>pkg sys &lt;pacman args&gt;</code> runs pacman commands directly on the system volume.</li><li>If you delete an app folder in <code>/Applications</code> manually, pkg detects it and won't bring it back unless reinstalled.</li></ul>",
 t5:"Migration",
 b5:"<p>The script moves an installed Arch, Manjaro or CachyOS system into the FasdeqOS layout on the same disk.</p><ul><li><b>Needs:</b> an Arch-based system, a btrfs root, UEFI, and root rights. Other systems stop with an error.</li><li><b>Volumes.</b> Missing btrfs volumes are created. Files are cloned, so no extra space is used.</li><li><b>Without backup (recommended).</b> GNU utilities are replaced by chimerautils, apps and games move into /Applications, pacman is replaced by pkg, and the old system is deleted after the first good boot.</li><li><b>With backup.</b> Everything is copied into /Users and the new layout. The old system stays as it was.</li></ul>",
 t6:"Help",
@@ -143,16 +158,16 @@ f:"FasdeqOS. Built on Arch Linux."},
 ru:{n1:"Обзор",n2:"Установка",n3:"Ручная установка",n4:"Пакеты",n5:"Миграция",n6:"Помощь",
 h:"Внутри Arch. Снаружи структура как в Mac.",
 sub:"FasdeqOS построена на Arch Linux. Системные файлы лежат в /System, приложения это папки в /Applications, ваши файлы в /Users.",
-dl:"Скачать ISO",src:"Исходный код",view:"Скрипт на GitHub",mg:"Перейти с Arch",w1:"Операционная система",w2:"Приложения, которые можно удалить",w3:"Общие настройки",w4:"Ваши файлы",w5:"Диски",
+dl:"Скачать ISO",src:"Исходный код",view:"Скрипт на GitHub",mg:"Перейти с Arch",w1:"Операционная система",w2:"Приложения и контейнеры",w3:"Общие настройки",w4:"Ваши файлы",w5:"Диски",w6:"Загрузчик и ядра",w7:"Каталог root",
 t1:"Обзор",
-b1:"<p>FasdeqOS сохраняет ядро, драйверы и systemd от Arch, а всё, что выше, меняет.</p><ul><li><b>Структура.</b> /System, /Applications, /Library, /Users и /Volumes. Привычные папки вроде /usr и /etc скрыты.</li><li><b>Диск.</b> Одна файловая система btrfs, по тому на каждую папку, как в APFS.</li><li><b>Утилиты.</b> glibc для приложений и musl для гостевых. Утилиты BSD (chimerautils) вместо GNU. Оболочка fish.</li><li><b>Приложения.</b> Каждое приложение это папка, которую можно удалить, например Firefox.pkg. Ими управляет команда pkg.</li></ul>",
+b1:"<p>FasdeqOS сохраняет ядро, драйверы и systemd от Arch, а всё, что выше, меняет.</p><ul><li><b>Структура.</b> /Applications, /boot, /Library, /root, /System, /Users и /Volumes. Привычные папки вроде /usr и /etc скрыты.</li><li><b>Диск.</b> Одна файловая система btrfs, по тому на каждую папку, как в APFS.</li><li><b>Утилиты.</b> glibc для приложений и musl для гостевых. Переключаемые утилиты BSD (chimerautils) или busybox через <code>pkg change-int</code>. Оболочка fish.</li><li><b>Приложения и система.</b> Команда <code>pkg</code> управляет приложениями (тяжёлые изолируются в контейнерах), репозиториями, рабочими столами и ядрами.</li></ul>",
 t2:"Установка",
 b2:"<ol><li>Скачайте ISO и запишите на флешку в режиме DD или подключите к виртуальной машине: 6 ГБ памяти, сетевой адаптер и диск 40 ГБ.</li><li>Загрузитесь. Установщик запустится сам.</li><li>Двигайтесь клавишами ↑ ↓ или W S, кнопки переключайте ← → или A D. Enter подтверждает, пробел отмечает.</li><li>Ответьте на вопросы: язык, раскладки клавиатуры и сочетание переключения, часовой пояс, зеркало, оболочка (KDE Plasma или GNOME), приложения, диск и учётная запись.</li><li>Проверьте итог, выберите Continue, затем Install. Перезагрузитесь, когда попросят.</li></ol><p>Режимы диска: свободное место на диске, стереть один диск или стереть все диски в один пул. Драйверы видеокарты выбираются автоматически.</p>",
 t3:"Ручная установка",
 b3:"<p>Это шаги, которые выполняет установщик. Замените <code>/dev/sdX</code> на свой диск и работайте от root в live-системе.</p>",
 b3b:"<p>Дальше выполните <code>arch-chroot</code> в папке stage: задайте локаль, пользователей, хук initramfs <code>fasdeqos-disk</code> и GRUB. Затем переложите файлы в структуру:</p>",
 t4:"Пакеты",
-b4:"<p>Команда <code>pkg</code> работает как Homebrew, а внутри использует pacman. Она ставит приложения в <code>/Applications</code> вместе с их зависимостями.</p><ul><li><code>pkg install</code> добавляет приложение, <code>pkg uninstall</code> удаляет.</li><li><code>pkg list</code> показывает приложения, <code>pkg list --removed</code> те, что вы удалили руками.</li><li><code>pkg search</code>, <code>pkg info</code>, <code>pkg update</code>, <code>pkg upgrade</code> и <code>pkg cleanup</code> делают то, что написано.</li><li>Если удалить папку приложения, pkg это заметит и не вернёт её. Чтобы вернуть, установите снова.</li></ul>",
+b4:"<p>Команда <code>pkg</code> управляет приложениями, репозиториями, ядрами и окружением, используя pacman под капотом.</p><ul><li><code>pkg install &lt;пакет|файл&gt;</code> — установка приложений (тяжёлые приложения автоматически изолируются в контейнерах).</li><li><code>pkg uninstall &lt;пакет&gt;</code> и <code>pkg list</code> — удаление и список установленных приложений.</li><li><code>pkg search &lt;текст&gt;</code> и <code>pkg info &lt;пакет&gt;</code> — поиск пакетов и детальная информация.</li><li><code>pkg update</code>, <code>pkg upgrade</code> и <code>pkg cleanup</code> — обновление баз, системы и очистка кэша.</li><li><code>pkg kernel [list|use &lt;имя&gt;]</code> — просмотр доступных ядер и переключение активного ядра.</li><li><code>pkg change-desktop &lt;имя&gt;</code> — переключение графического окружения (например, KDE Plasma или GNOME).</li><li><code>pkg change-int &lt;имя&gt;</code> — переключение базовых утилит между BSD (chimerautils) и busybox.</li><li><code>pkg list-repo</code>, <code>pkg add-repo &lt;url&gt; [имя]</code>, <code>pkg remove-repo &lt;имя&gt;</code> — управление репозиториями.</li><li><code>pkg sys &lt;аргументы pacman&gt;</code> — вызов pacman напрямую на системном томе.</li><li>Если удалить папку приложения из <code>/Applications</code> руками, pkg заметит это и не вернёт её без повторной установки.</li></ul>",
 t5:"Миграция",
 b5:"<p>Скрипт переносит установленный Arch, Manjaro или CachyOS в структуру FasdeqOS на том же диске.</p><ul><li><b>Требуется:</b> система на базе Arch, корень на btrfs, UEFI и права root. На других системах скрипт остановится с ошибкой.</li><li><b>Тома.</b> Недостающие тома btrfs создаются. Файлы клонируются, поэтому место не тратится.</li><li><b>Без бэкапа (рекомендуется).</b> GNU-утилиты заменяются на chimerautils, приложения и игры переезжают в /Applications, pacman заменяется на pkg, старая система удаляется после первой удачной загрузки.</li><li><b>С бэкапом.</b> Всё копируется в /Users и новую структуру. Старая система остаётся как была.</li></ul>",
 t6:"Помощь",
@@ -161,16 +176,16 @@ f:"FasdeqOS. Построена на Arch Linux."},
 uk:{n1:"Огляд",n2:"Встановлення",n3:"Ручне встановлення",n4:"Пакети",n5:"Міграція",n6:"Допомога",
 h:"Всередині Arch. Зовні структура як у Mac.",
 sub:"FasdeqOS побудована на Arch Linux. Системні файли лежать у /System, застосунки це теки в /Applications, ваші файли в /Users.",
-dl:"Завантажити ISO",src:"Вихідний код",view:"Скрипт на GitHub",mg:"Перейти з Arch",w1:"Операційна система",w2:"Застосунки, які можна видалити",w3:"Спільні налаштування",w4:"Ваші файли",w5:"Диски",
+dl:"Завантажити ISO",src:"Вихідний код",view:"Скрипт на GitHub",mg:"Перейти з Arch",w1:"Операційна система",w2:"Застосунки та контейнери",w3:"Спільні налаштування",w4:"Ваші файли",w5:"Диски",w6:"Завантажувач та ядра",w7:"Каталог root",
 t1:"Огляд",
-b1:"<p>FasdeqOS зберігає ядро, драйвери та systemd від Arch, а все, що вище, змінює.</p><ul><li><b>Структура.</b> /System, /Applications, /Library, /Users і /Volumes. Звичні теки на кшталт /usr та /etc приховані.</li><li><b>Диск.</b> Одна файлова система btrfs, по тому на кожну теку, як в APFS.</li><li><b>Утиліти.</b> glibc для застосунків і musl для гостьових. Утиліти BSD (chimerautils) замість GNU. Оболонка fish.</li><li><b>Застосунки.</b> Кожен застосунок це тека, яку можна видалити, наприклад Firefox.pkg. Ними керує команда pkg.</li></ul>",
+b1:"<p>FasdeqOS зберігає ядро, драйвери та systemd від Arch, а все, що вище, змінює.</p><ul><li><b>Структура.</b> /Applications, /boot, /Library, /root, /System, /Users і /Volumes. Звичні теки на кшталт /usr та /etc приховані.</li><li><b>Диск.</b> Одна файлова система btrfs, по тому на кожну теку, як в APFS.</li><li><b>Утиліти.</b> glibc для застосунків і musl для гостьових. Перемикання утиліт BSD (chimerautils) або busybox через <code>pkg change-int</code>. Оболонка fish.</li><li><b>Застосунки та система.</b> Команда <code>pkg</code> керує застосунками (важкі програми ізолюються в контейнерах), репозиторіями, стільничними середовищами та ядрами.</li></ul>",
 t2:"Встановлення",
 b2:"<ol><li>Завантажте ISO і запишіть на флешку в режимі DD або підключіть до віртуальної машини: 6 ГБ пам'яті, мережевий адаптер і диск 40 ГБ.</li><li>Завантажтеся. Встановлювач запуститься сам.</li><li>Рухайтеся клавішами ↑ ↓ або W S, кнопки перемикайте ← → або A D. Enter підтверджує, пробіл позначає.</li><li>Дайте відповіді: мова, розкладки клавіатури та комбінація перемикання, часовий пояс, дзеркало, оболонка (KDE Plasma або GNOME), застосунки, диск і обліковий запис.</li><li>Перевірте підсумок, оберіть Continue, потім Install. Перезавантажтеся, коли попросять.</li></ol><p>Режими диска: вільне місце на диску, стерти один диск або стерти всі диски в один пул. Драйвери відеокарти обираються автоматично.</p>",
 t3:"Ручне встановлення",
 b3:"<p>Це кроки, які виконує встановлювач. Замініть <code>/dev/sdX</code> на свій диск і працюйте від root у live-системі.</p>",
 b3b:"<p>Далі виконайте <code>arch-chroot</code> у теці stage: задайте локаль, користувачів, хук initramfs <code>fasdeqos-disk</code> та GRUB. Потім перенесіть файли в структуру:</p>",
 t4:"Пакети",
-b4:"<p>Команда <code>pkg</code> працює як Homebrew, а всередині використовує pacman. Вона ставить застосунки в <code>/Applications</code> разом із залежностями.</p><ul><li><code>pkg install</code> додає застосунок, <code>pkg uninstall</code> видаляє.</li><li><code>pkg list</code> показує застосунки, <code>pkg list --removed</code> ті, що ви видалили вручну.</li><li><code>pkg search</code>, <code>pkg info</code>, <code>pkg update</code>, <code>pkg upgrade</code> і <code>pkg cleanup</code> роблять те, що написано.</li><li>Якщо видалити теку застосунку, pkg це помітить і не поверне її. Щоб повернути, встановіть знову.</li></ul>",
+b4:"<p>Команда <code>pkg</code> керує застосунками, репозиторіями, ядрами та середовищем, використовуючи pacman під капотом.</p><ul><li><code>pkg install &lt;пакет|файл&gt;</code> — встановлення застосунків (важкі програми автоматично ізолюються в контейнерах).</li><li><code>pkg uninstall &lt;пакет&gt;</code> та <code>pkg list</code> — вилучення та перегляд встановлених застосунків.</li><li><code>pkg search &lt;текст&gt;</code> та <code>pkg info &lt;пакет&gt;</code> — пошук пакетів та перегляд інформації.</li><li><code>pkg update</code>, <code>pkg upgrade</code> та <code>pkg cleanup</code> — оновлення баз даних, оновлення всієї системи та очищення кешу.</li><li><code>pkg kernel [list|use &lt;ім'я&gt;]</code> — перегляд списку ядер та перемикання активного ядра.</li><li><code>pkg change-desktop &lt;ім'я&gt;</code> — перемикання стільничного середовища (наприклад, KDE Plasma або GNOME).</li><li><code>pkg change-int &lt;ім'я&gt;</code> — перемикання базових утиліт між BSD (chimerautils) та busybox.</li><li><code>pkg list-repo</code>, <code>pkg add-repo &lt;url&gt; [ім'я]</code>, <code>pkg remove-repo &lt;ім'я&gt;</code> — керування репозиторіями.</li><li><code>pkg sys &lt;аргументи pacman&gt;</code> — виклик pacman безпосередньо на системному томі.</li><li>Якщо вилучити теку застосунку з <code>/Applications</code> вручну, pkg це помітить і не відновлюватиме без повторного встановлення.</li></ul>",
 t5:"Міграція",
 b5:"<p>Скрипт переносить встановлений Arch, Manjaro або CachyOS у структуру FasdeqOS на тому ж диску.</p><ul><li><b>Потрібно:</b> система на базі Arch, корінь на btrfs, UEFI і права root. На інших системах скрипт зупиниться з помилкою.</li><li><b>Томи.</b> Відсутні томи btrfs створюються. Файли клонуються, тож місце не витрачається.</li><li><b>Без бекапу (рекомендовано).</b> GNU-утиліти замінюються на chimerautils, застосунки та ігри переїжджають в /Applications, pacman замінюється на pkg, стара система видаляється після першого вдалого завантаження.</li><li><b>З бекапом.</b> Усе копіюється в /Users і нову структуру. Стара система лишається як була.</li></ul>",
 t6:"Допомога",
@@ -179,16 +194,16 @@ f:"FasdeqOS. Побудована на Arch Linux."},
 zh:{n1:"概览",n2:"安装",n3:"手动安装",n4:"软件包",n5:"迁移",n6:"帮助",
 h:"底层是 Arch，外观是 Mac 式目录结构。",
 sub:"FasdeqOS 基于 Arch Linux。系统文件在 /System，应用是 /Applications 里的文件夹，你的文件在 /Users。",
-dl:"下载 ISO",src:"源代码",view:"在 GitHub 查看脚本",mg:"从 Arch 迁移",w1:"操作系统",w2:"可以删除的应用",w3:"共享设置",w4:"你的文件",w5:"磁盘",
+dl:"下载 ISO",src:"源代码",view:"在 GitHub 查看脚本",mg:"从 Arch 迁移",w1:"操作系统",w2:"应用与容器",w3:"共享设置",w4:"你的文件",w5:"磁盘",w6:"引导与内核",w7:"Root 目录",
 t1:"概览",
-b1:"<p>FasdeqOS 保留 Arch 的内核、驱动和 systemd，并改变它们之上的一切。</p><ul><li><b>目录结构。</b>/System、/Applications、/Library、/Users 和 /Volumes。/usr、/etc 等传统目录被隐藏。</li><li><b>磁盘。</b>一个 btrfs 文件系统，每个目录对应一个卷，类似 APFS。</li><li><b>工具。</b>应用使用 glibc，客体程序使用 musl。用 BSD 工具（chimerautils）取代 GNU。默认 shell 是 fish。</li><li><b>应用。</b>每个应用都是可以删除的文件夹，例如 Firefox.pkg，由 pkg 命令管理。</li></ul>",
+b1:"<p>FasdeqOS 保留 Arch 的内核、驱动和 systemd，并改变它们之上的一切。</p><ul><li><b>目录结构。</b>/Applications、/boot、/Library、/root、/System、/Users 和 /Volumes。/usr、/etc 等传统目录被隐藏。</li><li><b>磁盘。</b>一个 btrfs 文件系统，每个目录对应独立子卷，类似 APFS。</li><li><b>工具。</b>应用使用 glibc，客体程序使用 musl。支持通过 <code>pkg change-int</code> 随时切换 BSD 工具（chimerautils）或 busybox。默认 shell 是 fish。</li><li><b>应用与系统。</b><code>pkg</code> 命令管理应用（大型应用自动在容器中隔离运行）、软件源、桌面环境与内核。</li></ul>",
 t2:"安装",
 b2:"<ol><li>下载 ISO，用 DD 模式写入 U 盘，或挂载到虚拟机：6 GB 内存、网络适配器和 40 GB 磁盘。</li><li>启动后安装程序会自动运行。</li><li>用 ↑ ↓ 或 W S 移动，用 ← → 或 A D 切换按钮，Enter 确认，空格勾选。</li><li>回答问题：语言、键盘布局和切换快捷键、时区、镜像、桌面（KDE Plasma 或 GNOME）、应用、磁盘和账户。</li><li>检查摘要，选择 Continue，然后 Install。按提示重启。</li></ol><p>磁盘模式：使用磁盘剩余空间、清除一块磁盘，或清除所有磁盘合并为一个存储池。显卡驱动会自动选择。</p>",
 t3:"手动安装",
 b3:"<p>以下是安装程序执行的步骤。把 <code>/dev/sdX</code> 换成你的磁盘，并在 live 系统中以 root 身份操作。</p>",
 b3b:"<p>接着在 stage 目录中使用 <code>arch-chroot</code>，设置区域、用户、<code>fasdeqos-disk</code> initramfs 钩子和 GRUB。然后把文件移入目录结构：</p>",
 t4:"软件包",
-b4:"<p><code>pkg</code> 命令的用法类似 Homebrew，底层使用 pacman。它把应用连同依赖安装到 <code>/Applications</code>。</p><ul><li><code>pkg install</code> 添加应用，<code>pkg uninstall</code> 删除应用。</li><li><code>pkg list</code> 显示应用，<code>pkg list --removed</code> 显示你手动删除的应用。</li><li><code>pkg search</code>、<code>pkg info</code>、<code>pkg update</code>、<code>pkg upgrade</code> 和 <code>pkg cleanup</code> 如字面所述。</li><li>如果你删除了应用文件夹，pkg 会发现并且不会恢复它。想恢复请重新安装。</li></ul>",
+b4:"<p><code>pkg</code> 命令不仅管理应用，还能管理软件源、桌面环境与内核，底层使用 pacman。</p><ul><li><code>pkg install &lt;包名|文件&gt;</code> — 安装应用（重量级大型应用自动放入隔离容器中运行）。</li><li><code>pkg uninstall &lt;包名&gt;</code> 与 <code>pkg list</code> — 卸载应用与查看已安装应用。</li><li><code>pkg search &lt;关键词&gt;</code> 与 <code>pkg info &lt;包名&gt;</code> — 搜索软件包与查看详细信息。</li><li><code>pkg update</code>、<code>pkg upgrade</code> 与 <code>pkg cleanup</code> — 刷新数据库、升级系统与清理缓存。</li><li><code>pkg kernel [list|use &lt;名称&gt;]</code> — 查看可用内核并随时切换当前内核。</li><li><code>pkg change-desktop &lt;名称&gt;</code> — 快速切换桌面环境（如 KDE Plasma 或 GNOME）。</li><li><code>pkg change-int &lt;名称&gt;</code> — 在 BSD 工具链（chimerautils）与 busybox 之间自由切换基础环境。</li><li><code>pkg list-repo</code>、<code>pkg add-repo &lt;url&gt; [名称]</code>、<code>pkg remove-repo &lt;名称&gt;</code> — 管理扩展软件源。</li><li><code>pkg sys &lt;pacman 参数&gt;</code> — 直接在系统卷上执行底层 pacman 指令。</li><li>如果你手动删除了 <code>/Applications</code> 中的应用文件夹，pkg 会识别并不再恢复，除非重新安装。</li></ul>",
 t5:"迁移",
 b5:"<p>该脚本把已安装的 Arch、Manjaro 或 CachyOS 在同一块磁盘上迁移到 FasdeqOS 的目录结构。</p><ul><li><b>要求：</b>基于 Arch 的系统、btrfs 根分区、UEFI 和 root 权限。其他系统会报错并停止。</li><li><b>卷。</b>缺少的 btrfs 卷会被创建。文件通过克隆复制，不占用额外空间。</li><li><b>不备份（推荐）。</b>GNU 工具被 chimerautils 取代，应用和游戏移入 /Applications，pacman 被 pkg 取代，首次成功启动后删除旧系统。</li><li><b>备份。</b>所有内容复制到 /Users 和新结构，旧系统保持原样。</li></ul>",
 t6:"帮助",
