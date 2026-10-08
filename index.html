@@ -56,14 +56,14 @@ footer{text-align:center;color:var(--mut);padding:0 28px 48px;font-size:14px}
 </head>
 <body>
 <header>
-<div class="hl"><span class="logo">FasdeqOS</span><a class="src" href="handbook.html" data-t="hb" style="background:var(--ac);color:var(--acf);padding:4px 12px;border-radius:8px;font-weight:700;display:inline-flex;align-items:center;gap:6px">📖 Handbook</a><a class="src" href="https://github.com/Fasdeq13/fasdeqOS/tree/main" data-t="src">GitHub</a></div>
+<div class="hl"><span class="logo">FasdeqOS</span><a class="src" href="handbook.html" data-t="hb" style="background:var(--ac);color:var(--acf);padding:4px 12px;border-radius:8px;font-weight:700">Handbook</a><a class="src" href="https://github.com/Fasdeq13/fasdeqOS/tree/main" data-t="src">GitHub</a></div>
 <div class="lang"><button data-l="en">EN</button><button data-l="ru">RU</button><button data-l="it">IT</button><button data-l="uk">UK</button><button data-l="zh">中文</button></div>
 </header>
 <div class="hero">
 <div>
 <h1 data-t="h"></h1>
 <p class="sub" data-t="sub"></p>
-<div class="cta"><a class="btn p" href="handbook.html" data-t="hb_btn">📖 Handbook / Wiki</a><a class="btn" href="ISO_LINK" data-t="dl"></a><a class="btn" href="#migrate" data-t="mg"></a></div>
+<div class="cta"><a class="btn p" href="handbook.html" data-t="hb_btn">Handbook</a><a class="btn" href="ISO_LINK" data-t="dl"></a><a class="btn" href="#migrate" data-t="mg"></a></div>
 </div>
 <div class="win">
 <div class="bar"><i></i><i></i><i></i><span>FasdeqOS</span></div>
@@ -80,10 +80,9 @@ footer{text-align:center;color:var(--mut);padding:0 28px 48px;font-size:14px}
 </div>
 <div class="wrap">
 <nav class="side">
-<a href="handbook.html" style="color:var(--ac);font-weight:700" data-t="hb_side">📖 Handbook</a><a href="#install" data-t="n2"></a><a href="#manual" data-t="n3"></a><a href="#packages" data-t="n4"></a><a href="#migrate" data-t="n5"></a><a href="#help" data-t="n6"></a>
+<a href="handbook.html" style="color:var(--ac);font-weight:700" data-t="hb_side">Handbook</a><a href="#manual" data-t="n3"></a><a href="#packages" data-t="n4"></a><a href="#migrate" data-t="n5"></a><a href="#help" data-t="n6"></a>
 </nav>
 <main>
-<section id="install"><h2 data-t="t2"></h2><div data-t="b2"></div></section>
 <section id="manual"><h2 data-t="t3"></h2><div data-t="b3"></div>
 <pre><code>sgdisk --zap-all /dev/sdX
 sgdisk -n1:0:+1M -t1:ef02 -n2:0:+512M -t2:ef00 -n3:0:0 -t3:8300 /dev/sdX
@@ -108,18 +107,13 @@ mv /mnt/private/stage/root /mnt/private/var/root
 rm -rf /mnt/private/stage</code></pre>
 </section>
 <section id="packages"><h2 data-t="t4"></h2><div data-t="b4"></div>
-<pre><code># Install apps (heavy ones go into containers)
-pkg install blender
+<pre><code>pkg install blender
 pkg list
 pkg upgrade
-
-# Kernels, desktop environments, and userland
 pkg kernel list
 pkg kernel use linux-cachyos
 pkg change-desktop gnome
 pkg change-int busybox
-
-# Repositories and system-level pacman
 pkg add-repo https://repo.example.com custom
 pkg sys -Syu
 pkg cleanup</code></pre>
@@ -136,12 +130,10 @@ sudo -E bash fasdeqos-migrate </code></pre>
 <footer><span data-t="f"></span> <a href="https://github.com/Fasdeq13/fasdeqOS/tree/main">GitHub</a></footer>
 <script>
 const T={
-en:{hb:"📖 Handbook",hb_btn:"📖 Handbook / Wiki",hb_side:"📖 Handbook",n2:"Install",n3:"Manual install",n4:"Packages",n5:"Migration",n6:"Help",
+en:{hb:"Handbook",hb_btn:"Handbook",hb_side:"Handbook",n3:"Manual install",n4:"Packages",n5:"Migration",n6:"Help",
 h:"Arch underneath. A Mac-style layout on top.",
 sub:"FasdeqOS is built on Arch Linux. System files live in /System, apps are folders in /Applications, your files are in /Users.",
 dl:"Download ISO",src:"Source code",view:"View the script on GitHub",mg:"Migrate from Arch",w1:"Operating system",w2:"Apps & containers",w3:"Shared settings",w4:"Your files",w5:"Disks",w6:"Bootloader & kernels",w7:"Superuser home",
-t2:"Install",
-b2:"<ol><li>Download the ISO and write it to a USB drive in DD mode, or attach it to a virtual machine with 6 GB of RAM, a network adapter and a 40 GB disk.</li><li>Boot it. The installer starts on its own.</li><li>Move with ↑ ↓ or W S. Switch buttons with ← → or A D. Press Enter to confirm and Space to tick.</li><li>Answer the questions: language, keyboard layouts and switch shortcut, time zone, mirror, desktop (KDE Plasma or GNOME), apps, disk and account.</li><li>Check the summary, choose Continue, then Install. Reboot when asked.</li></ol><p>Disk modes: use free space on a disk, erase one disk, or erase all disks into one pool. Graphics drivers are chosen for you.</p>",
 t3:"Manual install",
 b3:"<p>These are the steps the installer runs. Replace <code>/dev/sdX</code> with your disk and work as root in the live system.</p>",
 b3b:"<p>Next, use <code>arch-chroot</code> on the stage folder to set the locale, users, the <code>fasdeqos-disk</code> initramfs hook and GRUB. Then move the files into the layout:</p>",
@@ -152,12 +144,10 @@ b5:"<p>The script moves an installed Arch, Manjaro or CachyOS system into the Fa
 t6:"Help",
 b6:"<ul><li><b>No network in a virtual machine.</b> Add a network adapter to the machine. The installer shows diagnostics if there is no connection.</li><li><b>USB does not boot.</b> Write the ISO in DD mode and turn Secure Boot off.</li><li><b>Steam and Wine.</b> A minimal /bin with only sh, bash, env and login is provided for them.</li></ul>",
 f:"FasdeqOS. Built on Arch Linux."},
-ru:{hb:"📖 Хэндбук",hb_btn:"📖 Хэндбук / Вики",hb_side:"📖 Хэндбук",n2:"Установка",n3:"Ручная установка",n4:"Пакеты",n5:"Миграция",n6:"Помощь",
+ru:{hb:"Handbook",hb_btn:"Handbook",hb_side:"Handbook",n3:"Ручная установка",n4:"Пакеты",n5:"Миграция",n6:"Помощь",
 h:"Внутри Arch. Снаружи структура как в Mac.",
 sub:"FasdeqOS построена на Arch Linux. Системные файлы лежат в /System, приложения это папки в /Applications, ваши файлы в /Users.",
 dl:"Скачать ISO",src:"Исходный код",view:"Скрипт на GitHub",mg:"Перейти с Arch",w1:"Операционная система",w2:"Приложения и контейнеры",w3:"Общие настройки",w4:"Ваши файлы",w5:"Диски",w6:"Загрузчик и ядра",w7:"Каталог root",
-t2:"Установка",
-b2:"<ol><li>Скачайте ISO и запишите на флешку в режиме DD или подключите к виртуальной машине: 6 ГБ памяти, сетевой адаптер и диск 40 ГБ.</li><li>Загрузитесь. Установщик запустится сам.</li><li>Двигайтесь клавишами ↑ ↓ или W S, кнопки переключайте ← → или A D. Enter подтверждает, пробел отмечает.</li><li>Ответьте на вопросы: язык, раскладки клавиатуры и сочетание переключения, часовой пояс, зеркало, оболочка (KDE Plasma или GNOME), приложения, диск и учётная запись.</li><li>Проверьте итог, выберите Continue, затем Install. Перезагрузитесь, когда попросят.</li></ol><p>Режимы диска: свободное место на диске, стереть один диск или стереть все диски в один пул. Драйверы видеокарты выбираются автоматически.</p>",
 t3:"Ручная установка",
 b3:"<p>Это шаги, которые выполняет установщик. Замените <code>/dev/sdX</code> на свой диск и работайте от root в live-системе.</p>",
 b3b:"<p>Дальше выполните <code>arch-chroot</code> в папке stage: задайте локаль, пользователей, хук initramfs <code>fasdeqos-disk</code> и GRUB. Затем переложите файлы в структуру:</p>",
@@ -168,12 +158,10 @@ b5:"<p>Скрипт переносит установленный Arch, Manjaro 
 t6:"Помощь",
 b6:"<ul><li><b>Нет сети в виртуальной машине.</b> Добавьте машине сетевой адаптер. Установщик покажет диагностику, если связи нет.</li><li><b>Флешка не загружается.</b> Запишите ISO в режиме DD и отключите Secure Boot.</li><li><b>Steam и Wine.</b> Для них предусмотрен минимальный /bin: только sh, bash, env и login.</li></ul>",
 f:"FasdeqOS. Построена на Arch Linux."},
-it:{hb:"📖 Guida",hb_btn:"📖 Guida / Wiki",hb_side:"📖 Guida",n2:"Installazione",n3:"Installazione manuale",n4:"Pacchetti",n5:"Migrazione",n6:"Aiuto",
+it:{hb:"Handbook",hb_btn:"Handbook",hb_side:"Handbook",n3:"Installazione manuale",n4:"Pacchetti",n5:"Migrazione",n6:"Aiuto",
 h:"Arch sotto il cofano. Struttura in stile Mac in superficie.",
 sub:"FasdeqOS è basato su Arch Linux. I file di sistema vivono in /System, le app in /Applications, i tuoi file in /Users.",
 dl:"Scarica ISO",src:"Codice sorgente",view:"Vedi lo script su GitHub",mg:"Migra da Arch",w1:"Sistema operativo",w2:"App e container",w3:"Impostazioni condivise",w4:"I tuoi file",w5:"Dischi",w6:"Bootloader e kernel",w7:"Cartella root",
-t2:"Installazione",
-b2:"<ol><li>Scarica l'ISO e scrivila su una chiavetta USB in modalità DD, oppure avviala in una macchina virtuale con 6 GB di RAM, scheda di rete e 40 GB di disco.</li><li>Avvia il sistema. L'installer si aprirà automaticamente.</li><li>Naviga con ↑ ↓ o W S, cambia pulsante con ← → o A D. Invio per confermare e Spazio per selezionare.</li><li>Rispondi alle domande: lingua, tastiera, fuso orario, mirror, ambiente desktop (KDE Plasma o GNOME), applicazioni, disco e account.</li><li>Verifica il riepilogo, premi Continua, poi Installa. Riavvia quando richiesto.</li></ol>",
 t3:"Installazione manuale",
 b3:"<p>Questi sono i passaggi eseguiti dall'installer. Sostituisci <code>/dev/sdX</code> con il tuo disco e opera come root nel sistema live.</p>",
 b3b:"<p>Successivamente esegui <code>arch-chroot</code> nella cartella stage per configurare locale, utenti, hook initramfs <code>fasdeqos-disk</code> e GRUB:</p>",
@@ -184,12 +172,10 @@ b5:"<p>Lo script migra un'installazione Arch, Manjaro o CachyOS verso la struttu
 t6:"Aiuto",
 b6:"<ul><li><b>Nessuna rete nella VM:</b> Aggiungi una scheda di rete virtuale. L'installer mostrerà la diagnostica.</li><li><b>L'USB non si avvia:</b> Scrivi la ISO in modalità DD e disattiva Secure Boot.</li><li><b>Steam e Wine:</b> Viene fornita una /bin minimale con sh, bash, env e login.</li></ul>",
 f:"FasdeqOS. Basato su Arch Linux."},
-uk:{hb:"📖 Хендбук",hb_btn:"📖 Хендбук / Вікі",hb_side:"📖 Хендбук",n2:"Встановлення",n3:"Ручне встановлення",n4:"Пакети",n5:"Міграція",n6:"Допомога",
+uk:{hb:"Handbook",hb_btn:"Handbook",hb_side:"Handbook",n3:"Ручне встановлення",n4:"Пакети",n5:"Міграція",n6:"Допомога",
 h:"Всередині Arch. Зовні структура як у Mac.",
 sub:"FasdeqOS побудована на Arch Linux. Системні файли лежать у /System, застосунки це теки в /Applications, ваші файли в /Users.",
 dl:"Завантажити ISO",src:"Вихідний код",view:"Скрипт на GitHub",mg:"Перейти з Arch",w1:"Операційна система",w2:"Застосунки та контейнери",w3:"Спільні налаштування",w4:"Ваші файли",w5:"Диски",w6:"Завантажувач та ядра",w7:"Каталог root",
-t2:"Встановлення",
-b2:"<ol><li>Завантажте ISO і запишіть на флешку в режимі DD або підключіть до віртуальної машини: 6 ГБ пам'яті, мережевий адаптер і диск 40 ГБ.</li><li>Завантажтеся. Встановлювач запуститься сам.</li><li>Рухайтеся клавішами ↑ ↓ або W S, кнопки перемикайте ← → або A D. Enter підтверджує, пробіл позначає.</li><li>Дайте відповіді: мова, розкладки клавіатури та комбінація перемикання, часовий пояс, дзеркало, оболонка (KDE Plasma або GNOME), застосунки, диск і обліковий запис.</li><li>Перевірте підсумок, оберіть Continue, потім Install. Перезавантажтеся, коли попросять.</li></ol><p>Режими диска: вільне місце на диску, стерти один диск або стерти всі диски в один пул. Драйвери відеокарти обираються автоматично.</p>",
 t3:"Ручне встановлення",
 b3:"<p>Це кроки, які виконує встановлювач. Замініть <code>/dev/sdX</code> на свій диск і працюйте від root у live-системі.</p>",
 b3b:"<p>Далі виконайте <code>arch-chroot</code> у теці stage: задайте локаль, користувачів, хук initramfs <code>fasdeqos-disk</code> та GRUB. Потім перенесіть файли в структуру:</p>",
@@ -200,12 +186,10 @@ b5:"<p>Скрипт переносить встановлений Arch, Manjaro 
 t6:"Допомога",
 b6:"<ul><li><b>Немає мережі у віртуальній машині.</b> Додайте машині мережевий адаптер. Встановлювач покаже діагностику, якщо зв'язку немає.</li><li><b>Флешка не завантажується.</b> Запишіть ISO в режимі DD і вимкніть Secure Boot.</li><li><b>Steam і Wine.</b> Для них передбачено мінімальний /bin: лише sh, bash, env і login.</li></ul>",
 f:"FasdeqOS. Побудована на Arch Linux."},
-zh:{hb:"📖 指南",hb_btn:"📖 指南 / 维基",hb_side:"📖 指南",n2:"安装",n3:"手动安装",n4:"软件包",n5:"迁移",n6:"帮助",
+zh:{hb:"Handbook",hb_btn:"Handbook",hb_side:"Handbook",n3:"手动安装",n4:"软件包",n5:"迁移",n6:"帮助",
 h:"底层是 Arch，外观是 Mac 式目录结构。",
 sub:"FasdeqOS 基于 Arch Linux。系统文件在 /System，应用是 /Applications 里的文件夹，你的文件在 /Users。",
 dl:"下载 ISO",src:"源代码",view:"在 GitHub 查看脚本",mg:"从 Arch 迁移",w1:"操作系统",w2:"应用与容器",w3:"共享设置",w4:"你的文件",w5:"磁盘",w6:"引导与内核",w7:"Root 目录",
-t2:"安装",
-b2:"<ol><li>下载 ISO，用 DD 模式写入 U 盘，或挂载到虚拟机：6 GB 内存、网络适配器和 40 GB 磁盘。</li><li>启动后安装程序会自动运行。</li><li>用 ↑ ↓ 或 W S 移动，用 ← → 或 A D 切换按钮，Enter 确认，空格勾选。</li><li>回答问题：语言、键盘布局和切换快捷键、时区、镜像、桌面（KDE Plasma 或 GNOME）、应用、磁盘和账户。</li><li>检查摘要，选择 Continue，然后 Install。按提示重启。</li></ol><p>磁盘模式：使用磁盘剩余空间、清除一块磁盘，或清除所有磁盘合并为一个存储池。显卡驱动会自动选择。</p>",
 t3:"手动安装",
 b3:"<p>以下是安装程序执行的步骤。把 <code>/dev/sdX</code> 换成你的磁盘，并在 live 系统中以 root 身份操作。</p>",
 b3b:"<p>接着在 stage 目录中使用 <code>arch-chroot</code>，设置区域、用户、<code>fasdeqos-disk</code> initramfs 钩子和 GRUB。然后把文件移入目录结构：</p>",
