@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FasdeqOS — Official Handbook & Wiki</title>
+<title>FasdeqOS — Handbook</title>
 <style>
 :root{--bg:#f4f5f8;--card:#fff;--ink:#14151a;--mut:#5b5f6b;--ac:#4647e8;--ac-hover:#3839cb;--acf:#fff;--bd:#dfe1e8;--code:#12131a;--codef:#dfe6f3;--tag:#eef0f8;--tagf:#36384a;--note-bg:rgba(70,71,232,0.08);--note-bd:#4647e8;--warn-bg:rgba(234,138,0,0.09);--warn-bd:#d97706;color-scheme:light dark}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1017;--card:#161822;--ink:#eceef4;--mut:#9a9fae;--ac:#8d8eff;--ac-hover:#7677f5;--acf:#0e1017;--bd:#262938;--code:#090a0f;--tag:#1e2130;--tagf:#c2c8dc;--note-bg:rgba(141,142,255,0.1);--note-bd:#8d8eff;--warn-bg:rgba(245,158,11,0.12);--warn-bd:#f59e0b}}
@@ -21,7 +21,7 @@ header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-
 .h-nav a{font-weight:600;font-size:14px;color:var(--mut)}
 .h-nav a:hover{color:var(--ac);text-decoration:none}
 .lang-box{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid var(--bd);border-radius:999px;background:var(--card)}
-.lang-box button{border:0;background:none;color:var(--mut);font:700 13px inherit;padding:5px 14px;border-radius:999px;cursor:pointer;transition:all .15s ease}
+.lang-box button{border:0;background:none;color:var(--mut);font:700 13px inherit;padding:5px 12px;border-radius:999px;cursor:pointer;transition:all .15s ease}
 .lang-box button.on{background:var(--ac);color:var(--acf)}
 .layout{max-width:1240px;margin:auto;padding:36px 32px 80px;display:grid;grid-template-columns:250px 1fr;gap:44px}
 .toc{position:sticky;top:92px;align-self:start;max-height:calc(100vh - 120px);overflow-y:auto;padding-right:12px}
@@ -51,10 +51,6 @@ th{font-weight:700;color:var(--ink);background:color-mix(in srgb,var(--ac) 6%,tr
 .callout{border-radius:12px;padding:16px 20px;margin:20px 0;font-size:15px;line-height:1.65}
 .callout.info{background:var(--note-bg);border-left:4px solid var(--note-bd)}
 .callout.warn{background:var(--warn-bg);border-left:4px solid var(--warn-bd)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid var(--ac);transition:all .15s ease}
-.btn.p{background:var(--ac);color:var(--acf)}
-.btn.p:hover{background:var(--ac-hover);text-decoration:none}
-.btn:hover{background:color-mix(in srgb,var(--ac) 12%,transparent);text-decoration:none}
 footer{border-top:1px solid var(--bd);background:var(--card);padding:40px 32px;color:var(--mut);font-size:14px}
 .f-wrap{max-width:1240px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
 .f-links{display:flex;gap:18px;flex-wrap:wrap}
@@ -72,24 +68,25 @@ span[data-lang].active-lang{display:inline}
 <div class="h-left">
 <div class="logo-wrap">
 <a href="index.html" class="logo">FasdeqOS</a>
-<span class="badge">Handbook & Wiki</span>
+<span class="badge">Handbook</span>
 </div>
 <nav class="h-nav">
-<a href="index.html">← <span data-lang="en" class="active-lang">Home</span><span data-lang="ru">Главная</span><span data-lang="it">Home</span></a>
+<a href="index.html">← <span data-lang="en" class="active-lang">Home</span><span data-lang="ru">Главная</span><span data-lang="it">Home</span><span data-lang="uk">Головна</span><span data-lang="zh">首页</span></a>
 <a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">GitHub</a>
-<a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank"><span data-lang="en" class="active-lang">Bug Reports</span><span data-lang="ru">Баг-репорты</span><span data-lang="it">Segnalazioni</span></a>
+<a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank"><span data-lang="en" class="active-lang">Bug Reports</span><span data-lang="ru">Баг-репорты</span><span data-lang="it">Segnalazioni</span><span data-lang="uk">Баг-репорти</span><span data-lang="zh">反馈</span></a>
 </nav>
 </div>
 <div class="lang-box" aria-label="Language selector">
 <button data-btn-lang="en" class="on">EN</button>
 <button data-btn-lang="ru">RU</button>
 <button data-btn-lang="it">IT</button>
+<button data-btn-lang="uk">UK</button>
+<button data-btn-lang="zh">中文</button>
 </div>
 </header>
 
 <div class="layout">
 
-<!-- TABLE OF CONTENTS (EN) -->
 <aside class="toc" data-lang="en" class="active-lang">
 <div class="toc-title">Handbook Navigation</div>
 <nav class="toc-links">
@@ -104,9 +101,8 @@ span[data-lang].active-lang{display:inline}
 </nav>
 </aside>
 
-<!-- TABLE OF CONTENTS (RU) -->
 <aside class="toc" data-lang="ru">
-<div class="toc-title">Оглавление Вики</div>
+<div class="toc-title">Handbook Навигация</div>
 <nav class="toc-links">
 <a href="#ch1">1. Введение и структура</a>
 <a href="#pkg">↳ Пакетный менеджер (pkg)</a>
@@ -119,9 +115,8 @@ span[data-lang].active-lang{display:inline}
 </nav>
 </aside>
 
-<!-- TABLE OF CONTENTS (IT) -->
 <aside class="toc" data-lang="it">
-<div class="toc-title">Indice del Manuale</div>
+<div class="toc-title">Handbook Navigazione</div>
 <nav class="toc-links">
 <a href="#ch1">1. Introduzione e Struttura</a>
 <a href="#pkg">↳ Gestore Pacchetti (pkg)</a>
@@ -134,14 +129,39 @@ span[data-lang].active-lang{display:inline}
 </nav>
 </aside>
 
-<!-- MAIN DOCUMENTATION CONTAINER -->
+<aside class="toc" data-lang="uk">
+<div class="toc-title">Handbook Навігація</div>
+<nav class="toc-links">
+<a href="#ch1">1. Вступ та файлова структура</a>
+<a href="#pkg">↳ Пакетний менеджер (pkg)</a>
+<a href="#troubleshoot">↳ Вирішення проблем</a>
+<a href="#ch2">2. Встановлення системи</a>
+<a href="#ch3">3. Міграція з Arch</a>
+<a href="#ch4">4. Steam та ігри</a>
+<a href="#ch5">5. Wine та програми Windows</a>
+<a href="#links">6. Системні посилання</a>
+</nav>
+</aside>
+
+<aside class="toc" data-lang="zh">
+<div class="toc-title">Handbook 目录导航</div>
+<nav class="toc-links">
+<a href="#ch1">1. 简介与系统架构</a>
+<a href="#pkg">↳ 软件包管理器 (pkg)</a>
+<a href="#troubleshoot">↳ 疑难解答与帮助</a>
+<a href="#ch2">2. 系统安装指南</a>
+<a href="#ch3">3. 从 Arch 系系统迁移</a>
+<a href="#ch4">4. Steam 与游戏配置</a>
+<a href="#ch5">5. Wine 与 Windows 应用</a>
+<a href="#links">6. 系统链接与源码</a>
+</nav>
+</aside>
+
 <main class="doc">
 
-<!-- ==================== ENGLISH VERSION ==================== -->
 <div data-lang="en" class="active-lang">
-
 <div class="hero-box">
-<h1>FasdeqOS Documentation & Wiki</h1>
+<h1>FasdeqOS Handbook</h1>
 <p class="lead">An open-source rolling-release Linux distribution combining the pure power of <a href="https://archlinux.org/" target="_blank">Arch Linux</a> with the intuitive, clean filesystem layout of Apple macOS.</p>
 <div class="meta-pills">
 <span class="meta-pill">ID: <code>fasdeqos</code></span>
@@ -153,20 +173,20 @@ span[data-lang].active-lang{display:inline}
 
 <section id="ch1">
 <h2>Chapter 1 — Introduction & Architecture</h2>
-<p><b>FasdeqOS</b> is an independent, open-source Linux operating system built directly on top of Arch Linux. It is designed to provide a frictionless transition from macOS to the Linux ecosystem by replicating the clean, human-readable filesystem tree of macOS while keeping the bleeding-edge upstream <a href="https://www.kernel.org/" target="_blank">Linux Kernel</a>, hardware drivers, and systemd service foundation.</p>
+<p><b>FasdeqOS</b> is an open-source Linux operating system built directly on top of Arch Linux, designed for a smooth transition from macOS to the Linux ecosystem. It retains the upstream <a href="https://www.kernel.org/" target="_blank">Linux Kernel</a>, hardware drivers, and systemd foundation while providing a modern macOS-inspired filesystem hierarchy.</p>
 
 <h3>Filesystem Layout</h3>
-<p>Traditional Linux distributions place binaries and files across sprawling directories (<code>/usr/bin</code>, <code>/etc</code>, <code>/var/lib</code>, <code>/lib64</code>). FasdeqOS solves this by leveraging <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs subvolumes</a> to emulate the clean hierarchy of Apple APFS:</p>
+<p>FasdeqOS uses <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs subvolumes</a> to emulate the clean structure of Apple APFS:</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Directory</th><th>Subvolume Role</th><th>Description</th></tr></thead>
+<thead><tr><th>Directory</th><th>Subvolume</th><th>Description</th></tr></thead>
 <tbody>
-<tr><td><code>/Applications</code></td><td>Applications</td><td>User software packages, self-contained app bundles, icons, binaries, and dependencies.</td></tr>
-<tr><td><code>/System</code></td><td>System</td><td>Immutable operating system root volume containing core system binaries, libraries, and essential daemons.</td></tr>
-<tr><td><code>/Library</code></td><td>Library</td><td>Global settings, frameworks, shared system resources, desktop themes, and global configurations.</td></tr>
-<tr><td><code>/Users</code></td><td>Users</td><td>User accounts, personal data, caches, documents, and personal home directories (e.g. <code>/Users/fasdeq</code>).</td></tr>
-<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Mount points for external USB media, secondary disk drives, and network storage shares.</td></tr>
+<tr><td><code>/Applications</code></td><td>Applications</td><td>User application packages, bundles, icons, binaries, and isolated dependencies.</td></tr>
+<tr><td><code>/System</code></td><td>System</td><td>Operating system root volume containing core binaries and essential system services.</td></tr>
+<tr><td><code>/Library</code></td><td>Library</td><td>Global settings, frameworks, shared system resources, and global configurations.</td></tr>
+<tr><td><code>/Users</code></td><td>Users</td><td>User accounts, personal files, documents, and individual configurations.</td></tr>
+<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Mount points for external drives, secondary partitions, and network storage shares.</td></tr>
 <tr><td><code>/boot</code></td><td>Boot volume</td><td>UEFI bootloaders (GRUB, Limine, systemd-boot) and compressed Linux kernel images.</td></tr>
 <tr><td><code>/root</code></td><td>Root Home</td><td>Administrative home directory for the superuser.</td></tr>
 </tbody>
@@ -174,66 +194,56 @@ span[data-lang].active-lang{display:inline}
 </div>
 
 <div class="callout info">
-<b>Clean Abstraction:</b> Legacy UNIX folders like <code>/usr</code> and <code>/etc</code> are neatly mounted behind the scenes inside private stage volumes to preserve compatibility with standard software while presenting a spotless top-level directory.
+Legacy directories such as <code>/usr</code> and <code>/etc</code> are mounted within isolated stages behind the scenes, ensuring full software compatibility.
 </div>
 
 <h3 id="pkg">Package Management with <code>pkg</code></h3>
-<p>FasdeqOS features a dedicated package manager called <code>pkg</code>, designed with clear BSD-inspired command syntax. Under the hood, <code>pkg</code> interacts with Arch's powerful <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a> engine, handling user application isolation, containerization, and system customization.</p>
+<p>FasdeqOS features a dedicated package manager called <code>pkg</code> with BSD-style syntax, operating as a high-level wrapper over <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a>.</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Command</th><th>Purpose & Explanation</th></tr></thead>
+<thead><tr><th>Command</th><th>Purpose</th></tr></thead>
 <tbody>
-<tr><td><code>pkg install &lt;package|file&gt;</code></td><td>Installs applications from repositories or local <code>.tar.zst</code> packages. Resource-heavy applications automatically run in isolated containers.</td></tr>
+<tr><td><code>pkg install &lt;package|file&gt;</code></td><td>Installs applications from repositories or local <code>.tar.zst</code> packages. Heavy applications are containerized automatically.</td></tr>
 <tr><td><code>pkg uninstall &lt;package&gt;</code></td><td>Removes installed applications and unregisters metadata.</td></tr>
-<tr><td><code>pkg list</code></td><td>Lists all installed applications located in <code>/Applications</code>.</td></tr>
-<tr><td><code>pkg search &lt;text&gt;</code></td><td>Searches package repositories for available packages matching keywords.</td></tr>
-<tr><td><code>pkg info &lt;package&gt;</code></td><td>Displays comprehensive information, dependencies, and size of a package.</td></tr>
-<tr><td><code>pkg update</code></td><td>Refreshes repository mirrors and package synchronization databases.</td></tr>
-<tr><td><code>pkg upgrade [package ...]</code></td><td>Upgrades the entire system and all installed applications.</td></tr>
-<tr><td><code>pkg list-repo</code></td><td>Lists configured third-party and extra repositories.</td></tr>
-<tr><td><code>pkg add-repo &lt;url&gt; [name]</code></td><td>Adds a custom package repository to the system.</td></tr>
+<tr><td><code>pkg list</code></td><td>Lists installed applications in <code>/Applications</code>.</td></tr>
+<tr><td><code>pkg search &lt;text&gt;</code></td><td>Searches package repositories.</td></tr>
+<tr><td><code>pkg info &lt;package&gt;</code></td><td>Displays package metadata, dependencies, and size.</td></tr>
+<tr><td><code>pkg update</code></td><td>Refreshes package databases and mirrors.</td></tr>
+<tr><td><code>pkg upgrade [package ...]</code></td><td>Upgrades the system and all applications.</td></tr>
+<tr><td><code>pkg list-repo</code></td><td>Lists configured extra repositories.</td></tr>
+<tr><td><code>pkg add-repo &lt;url&gt; [name]</code></td><td>Adds a repository to the system.</td></tr>
 <tr><td><code>pkg remove-repo &lt;name&gt;</code></td><td>Removes a configured repository.</td></tr>
-<tr><td><code>pkg kernel [list|use &lt;name&gt;]</code></td><td>Lists installed kernels or switches the active kernel (e.g. <code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
-<tr><td><code>pkg sys &lt;pacman args&gt;</code></td><td>Invokes pacman directly on the underlying <code>/System</code> volume. Recommended strictly for kernels, drivers, and low-level system services.</td></tr>
-<tr><td><code>pkg change-desktop &lt;name&gt;</code></td><td>Switches desktop environment on the fly. Supported: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
-<tr><td><code>pkg change-int &lt;name&gt;</code></td><td>Switches the base userland toolset between <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (BSD core utilities) and <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
-<tr><td><code>pkg cleanup</code></td><td>Clears local package cache and temporary build directories.</td></tr>
+<tr><td><code>pkg kernel [list|use &lt;name&gt;]</code></td><td>Lists or switches active Linux kernels (e.g. <code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
+<tr><td><code>pkg sys &lt;pacman args&gt;</code></td><td>Executes pacman directly on the <code>/System</code> volume for kernels, drivers, and low-level services.</td></tr>
+<tr><td><code>pkg change-desktop &lt;name&gt;</code></td><td>Switches desktop environment: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
+<tr><td><code>pkg change-int &lt;name&gt;</code></td><td>Switches userland between <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (BSD) and <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
+<tr><td><code>pkg cleanup</code></td><td>Clears local package cache and temporary directories.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3 id="troubleshoot">Troubleshooting & First Aid</h3>
+<h3 id="troubleshoot">Troubleshooting</h3>
 <ul>
-<li><b>No network inside a Virtual Machine:</b> If testing in a virtualized environment, ensure your VM hypervisor assigns an active network adapter (VirtIO / NAT / Bridged). In QEMU, attach <code>-net nic,model=virtio -net user</code>. The installer runs auto-diagnostics at start.</li>
-<li><b>USB Boot Failure:</b> Disable <b>Secure Boot</b> in your UEFI/BIOS firmware settings. Flash the ISO using raw DD mode (we recommend <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> or <code>dd if=fasdeqos.iso of=/dev/sdX bs=4M status=progress</code>).</li>
-<li><b>Steam & Wine compatibility:</b> Classic Linux gaming packages expect rigid paths in <code>/bin</code>. FasdeqOS isolates these workloads smoothly using containers (<a href="https://distrobox.it/" target="_blank">Distrobox</a>, Flatpak, Podman). See Chapters 4 & 5.</li>
+<li><b>No network inside a Virtual Machine:</b> Ensure your hypervisor assigns a network adapter (VirtIO / NAT / Bridged). With QEMU, attach <code>-net nic,model=virtio -net user</code>.</li>
+<li><b>USB Boot Failure:</b> Disable Secure Boot in your UEFI/BIOS. Flash the ISO in DD mode using <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> or <code>dd</code>.</li>
+<li><b>Steam & Wine compatibility:</b> Traditional 32-bit binaries requiring legacy paths in <code>/bin</code> run through <a href="https://distrobox.it/" target="_blank">Distrobox</a> containers (Chapters 4 & 5).</li>
 </ul>
 </section>
 
 <section id="ch2">
-<h2>Chapter 2 — Installation Guide</h2>
-<p>The standard way to install FasdeqOS is through the interactive installer which launches automatically on boot. However, if you wish to customize disk layouts, build a minimal system, or manage encryption manually, follow the manual installation pipeline below.</p>
+<h2>Chapter 2 — Installation</h2>
+<p>Manual installation allows building custom partitions, subvolumes, and minimal setups.</p>
 
-<h3>Manual Installation Workflow</h3>
-<p>Boot the live ISO, switch to root, identify your target storage drive (replace <code>/dev/sdX</code> accordingly), and run:</p>
-
-<pre><code># 1. Partition the disk (BIOS Boot, EFI System, Btrfs Root)
-sgdisk --zap-all /dev/sdX
+<pre><code>sgdisk --zap-all /dev/sdX
 sgdisk -n1:0:+1M -t1:ef02 -n2:0:+512M -t2:ef00 -n3:0:0 -t3:8300 /dev/sdX
-
-# 2. Format EFI and Btrfs filesystems
 mkfs.fat -F32 -n EFI /dev/sdX2
 mkfs.btrfs -L FasdeqOS /dev/sdX3
-
-# 3. Create APFS-style Btrfs subvolumes
 mount /dev/sdX3 /mnt
 for v in root System Applications Library Users private; do
   btrfs subvolume create /mnt/$v
 done
 umount /mnt
-
-# 4. Mount root with zstd compression and mount subvolumes
 mount -o compress=zstd:1,subvol=root /dev/sdX3 /mnt
 mkdir -p /mnt/{System,Applications,Library,Users,private,Volumes,usr,lib,lib64,etc,var,tmp}
 for v in System Applications Library Users private; do
@@ -241,15 +251,11 @@ for v in System Applications Library Users private; do
 done
 mkdir -p /mnt/private/stage/boot
 mount /dev/sdX2 /mnt/private/stage/boot
+pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
 
-# 5. Bootstrap base software with pacstrap
-pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux \
-  kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
+<p>After bootstrapping and configuring the chroot, relocate the payload into the FasdeqOS hierarchy:</p>
 
-<p>After base bootstrap, enter the chroot to configure user credentials, locales, the <code>fasdeqos-disk</code> initramfs hook, and the bootloader:</p>
-
-<pre><code># 6. Extract payload and reorganize into FasdeqOS structure
-bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
+<pre><code>bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
 bsdtar -cpf - -C /mnt/private/stage/usr . | bsdtar -xpf - -C /mnt/System
 rm -rf /mnt/private/stage/usr
 mv /mnt/private/stage/etc /mnt/private/etc
@@ -259,121 +265,90 @@ rm -rf /mnt/private/stage</code></pre>
 </section>
 
 <section id="ch3">
-<h2>Chapter 3 — Migration from Arch-based Systems</h2>
-<p>If you already run an Arch Linux installation or derivative (<a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a>, or experimentally <a href="https://github.com/" target="_blank">Omarchy</a>), you can migrate directly into FasdeqOS in-place without losing your personal data.</p>
+<h2>Chapter 3 — Migration from Arch</h2>
+<p>Migrate in-place from <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, <a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a>, or <a href="https://github.com/" target="_blank">Omarchy</a> without losing data.</p>
 
-<h3>Prerequisites</h3>
+<h3>Requirements</h3>
 <ul>
-<li>Operating system based on Arch Linux.</li>
-<li>Root filesystem formatted as <b>Btrfs</b>.</li>
+<li>Arch-based Linux distribution.</li>
+<li>Root partition formatted with Btrfs.</li>
 <li>UEFI system with Limine, GRUB, or systemd-boot.</li>
-<li>Root privileges.</li>
+<li>Root permissions.</li>
 </ul>
-
-<h3>Reflink Cloning Technology</h3>
-<p>Missing Btrfs subvolumes are created on the existing partition. Files are cloned using Btrfs reflink technology, meaning duplicate data references existing blocks without consuming extra storage space.</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Migration Mode</th><th>Behavior</th></tr></thead>
+<thead><tr><th>Mode</th><th>Operation</th></tr></thead>
 <tbody>
-<tr><td><b>Without backup (Recommended)</b></td><td>GNU coreutils are replaced by BSD chimerautils, desktop apps and games migrate to <code>/Applications</code>, pacman is replaced by <code>pkg</code>, and the legacy system is removed after the first verified boot.</td></tr>
-<tr><td><b>With backup</b></td><td>Data is duplicated into <code>/Users</code> and the new layout while retaining the entire legacy distribution intact.</td></tr>
+<tr><td><b>Without backup (Recommended)</b></td><td>GNU tools are replaced by chimerautils, apps move to <code>/Applications</code>, pacman is replaced by <code>pkg</code>, and old system files are removed upon verified boot.</td></tr>
+<tr><td><b>With backup</b></td><td>Data is copied into <code>/Users</code> and the new layout while preserving the legacy distribution.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>Running the Migration Script</h3>
-<p>Open your terminal and run:</p>
 <pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
 sudo -E bash fasdeqos-migrate</code></pre>
-<p>Inspect the script directly on <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>. Select your preferences in the interactive wizard and reboot when finished.</p>
+<p>Script repository: <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>.</p>
 </section>
 
 <section id="ch4">
 <h2>Chapter 4 — Steam & Gaming</h2>
-<p>Steam and 32-bit gaming dependencies expect traditional Unix hierarchies in <code>/bin</code>. FasdeqOS keeps its host clean and isolates Steam within an optimized <a href="https://distrobox.it/" target="_blank">Distrobox</a> container running the performant <a href="https://cachyos.org/" target="_blank">CachyOS</a> userland.</p>
+<p>Run Steam and gaming titles in an isolated <a href="https://distrobox.it/" target="_blank">Distrobox</a> container using <a href="https://cachyos.org/" target="_blank">CachyOS v3</a>.</p>
 
-<h3>Step 1. Container Creation</h3>
-<p>Depending on your graphics hardware, run the appropriate container creation command:</p>
+<h4>NVIDIA GPU:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
 
-<h4>For NVIDIA GPUs:</h4>
-<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam \
-  --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
+<h4>AMD / Intel GPU:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
 
-<h4>For AMD / Intel GPUs:</h4>
-<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam \
-  --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
-
-<h3>Step 2. Entering Container & Installing Steam</h3>
-<pre><code># Enter the container
-distrobox enter cachy-steam
-
-# Inside the container: update and install Steam
-sudo pacman -Syu steam</code></pre>
-
-<h3>Step 3. Exporting Steam to the Host</h3>
-<pre><code># Inside container: export Steam to host application menus
+<h4>Install & Export Steam:</h4>
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu steam
 distrobox-export --app steam</code></pre>
-<p>Steam will now appear in your application launcher and desktop interface, running with direct GPU acceleration.</p>
 </section>
 
 <section id="ch5">
 <h2>Chapter 5 — Wine & Windows Applications</h2>
-<p>Run Windows applications and games effortlessly by installing Wine into your <code>cachy-steam</code> gaming container.</p>
+<p>Install Wine into the <code>cachy-steam</code> container and export binaries to your host user PATH.</p>
 
-<h3>Step 1. Install Wine & Runtime Libraries</h3>
-<p>Enter the container (or use the one created in Chapter 4) and execute:</p>
 <pre><code>distrobox enter cachy-steam
-sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm</code></pre>
-
-<h3>Step 2. Export Wine Binaries to Host User PATH</h3>
-<pre><code>distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
+sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm
+distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
 distrobox-export --bin /usr/bin/winecfg --export-path ~/.local/bin
 distrobox-export --bin /usr/bin/winetricks --export-path ~/.local/bin</code></pre>
 
-<h3>Step 3. Configure Wine Prefix</h3>
-<p>Run <code>winecfg</code> in your terminal to initialize and configure your <code>~/.wine</code> prefix.</p>
-
-<h3>Step 4. Creating a Desktop Shortcut</h3>
-<p>To launch any <code>.exe</code> seamlessly from your desktop or app menu, create a <code>.desktop</code> file:</p>
+<h4>Desktop Shortcut:</h4>
 <pre><code>nano /Users/$USER/.local/share/applications/myapp.desktop</code></pre>
 
-<p>Paste the following desktop entry:</p>
 <pre><code>[Desktop Entry]
 Name=My Windows Application
 Exec=distrobox-enter -n cachy-steam -- wine "/path/to/program.exe"
 Type=Application
 Terminal=false
 Categories=Game;</code></pre>
-<p><i>In <code>nano</code>: press <kbd>Ctrl+O</kbd> and <kbd>Enter</kbd> to save, then <kbd>Ctrl+X</kbd> to exit.</i></p>
 </section>
 
 <section id="links">
-<h2>System Metadata & Upstream Links</h2>
-<p>Official endpoints declared in <code>/etc/os-release</code>:</p>
+<h2>System Links & Source</h2>
 <div class="table-wrap">
 <table>
 <thead><tr><th>Property</th><th>URL</th></tr></thead>
 <tbody>
-<tr><td>Home Page</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>Home URL</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
 <tr><td>Documentation</td><td><a href="https://fasdeq13.github.io/fasdeq-os/#overview" target="_blank">https://fasdeq13.github.io/fasdeq-os/#overview</a></td></tr>
-<tr><td>Support Portal</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
-<tr><td>Bug Reports / Pulls</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
-<tr><td>Source Repository</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
+<tr><td>Support</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>Bug Reports</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
+<tr><td>Repository</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
 </tbody>
 </table>
 </div>
 </section>
-
 </div>
 
-<!-- ==================== RUSSIAN VERSION ==================== -->
 <div data-lang="ru">
-
 <div class="hero-box">
-<h1>Документация и База Знаний FasdeqOS</h1>
-<p class="lead">Дистрибутив Linux со скользящей моделью обновлений (rolling release), объединяющий гибкость и мощь <a href="https://archlinux.org/" target="_blank">Arch Linux</a> с удобной и понятной файловой структурой macOS.</p>
+<h1>FasdeqOS Handbook</h1>
+<p class="lead">Дистрибутив Linux со скользящей моделью обновлений (rolling release), объединяющий гибкость <a href="https://archlinux.org/" target="_blank">Arch Linux</a> с удобной файловой структурой macOS.</p>
 <div class="meta-pills">
 <span class="meta-pill">ID: <code>fasdeqos</code></span>
 <span class="meta-pill">Тип: Rolling Release</span>
@@ -383,21 +358,21 @@ Categories=Game;</code></pre>
 </div>
 
 <section id="ch1">
-<h2>Глава 1 — Введение и архитектура</h2>
-<p><b>FasdeqOS</b> — это открытый дистрибутив Linux на базе Arch Linux, созданный для максимально комфортного перехода с macOS на Linux. Он сохраняет официальное ядро <a href="https://www.kernel.org/" target="_blank">Linux</a>, аппаратные драйверы и systemd от Arch, но кардинально реорганизует всё, что находится выше — структуру каталогов, окружение пользователя и управление софтом.</p>
+<h2>Глава 1 — Введение и структура</h2>
+<p><b>FasdeqOS</b> — открытый дистрибутив Linux на базе Arch Linux, созданный для комфортного перехода с macOS на Linux. Он сохраняет официальное ядро <a href="https://www.kernel.org/" target="_blank">Linux</a>, аппаратные драйверы и systemd от Arch, реорганизуя структуру каталогов и управление пакетами.</p>
 
 <h3>Структура файлов</h3>
-<p>Вместо разбросанных по диску классических каталогов (<code>/usr/bin</code>, <code>/etc</code>, <code>/var</code>) FasdeqOS использует субтома <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs</a>, имитируя файловую систему Apple APFS:</p>
+<p>FasdeqOS использует субтома <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs</a> для имитации файловой системы Apple APFS:</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Каталог</th><th>Субтом Btrfs</th><th>Назначение</th></tr></thead>
+<thead><tr><th>Каталог</th><th>Субтом</th><th>Назначение</th></tr></thead>
 <tbody>
-<tr><td><code>/Applications</code></td><td>Applications</td><td>Папка приложений пользователя. Содержит изолированные пакеты, иконки, бинарники и зависимости.</td></tr>
-<tr><td><code>/System</code></td><td>System</td><td>Системный том операционной системы. Здесь находятся базовые файлы ОС и критически важные службы.</td></tr>
+<tr><td><code>/Applications</code></td><td>Applications</td><td>Папка приложений пользователя, самодостаточные пакеты, иконки, бинарники и зависимости.</td></tr>
+<tr><td><code>/System</code></td><td>System</td><td>Системный том операционной системы, базовые файлы ОС и службы.</td></tr>
 <tr><td><code>/Library</code></td><td>Library</td><td>Библиотеки, общесистемные ресурсы, темы оформления и глобальные конфигурации.</td></tr>
-<tr><td><code>/Users</code></td><td>Users</td><td>Домашние каталоги пользователей (например, <code>/Users/fasdeq</code>), личные документы и конфиги.</td></tr>
-<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Точки монтирования внешних накопителей, флешек, дополнительных разделов и сетевых дисков.</td></tr>
+<tr><td><code>/Users</code></td><td>Users</td><td>Домашние каталоги пользователей, личные документы и конфигурации.</td></tr>
+<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Точки монтирования внешних накопителей, дополнительных разделов и сетевых дисков.</td></tr>
 <tr><td><code>/boot</code></td><td>Boot volume</td><td>Загрузчики (GRUB, Limine, systemd-boot) и сжатые образы ядер Linux.</td></tr>
 <tr><td><code>/root</code></td><td>Root Home</td><td>Домашний каталог суперпользователя root.</td></tr>
 </tbody>
@@ -405,66 +380,56 @@ Categories=Game;</code></pre>
 </div>
 
 <div class="callout info">
-<b>Чистота и порядок:</b> Стандартные каталоги <code>/usr</code>, <code>/etc</code> и <code>/var</code> скрыты и смонтированы внутри изолированных слоёв, сохраняя полную бинарную совместимость со стандартами Linux.
+Стандартные каталоги <code>/usr</code>, <code>/etc</code> и <code>/var</code> скрыты и смонтированы внутри изолированных слоев, сохраняя бинарную совместимость.
 </div>
 
 <h3 id="pkg">Пакетный менеджер <code>pkg</code></h3>
-<p>В системе используется пакетный менеджер <code>pkg</code>, синтаксис которого вдохновлён BSD pkg. Он представляет собой удобную высокоуровневую обёртку над <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a>.</p>
+<p>В системе используется пакетный менеджер <code>pkg</code> с BSD-синтаксисом, являющийся оберткой над <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a>.</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Команда</th><th>Описание и возможности</th></tr></thead>
+<thead><tr><th>Команда</th><th>Описание</th></tr></thead>
 <tbody>
-<tr><td><code>pkg install &lt;пакет|файл&gt;</code></td><td>Установка приложений из репозиториев или локальных файлов <code>.tar.zst</code>. Тяжёлые приложения автоматически изолируются в контейнерах.</td></tr>
-<tr><td><code>pkg uninstall &lt;пакет&gt;</code></td><td>Чистое удаление приложения и сопутствующих файлов.</td></tr>
-<tr><td><code>pkg list</code></td><td>Просмотр списка установленных приложений в <code>/Applications</code>.</td></tr>
-<tr><td><code>pkg search &lt;текст&gt;</code></td><td>Поиск доступных пакетов по ключевым словам.</td></tr>
-<tr><td><code>pkg info &lt;пакет&gt;</code></td><td>Подробная информация о пакете, зависимостях и размере.</td></tr>
-<tr><td><code>pkg update</code></td><td>Обновление баз данных пакетов и зеркал.</td></tr>
-<tr><td><code>pkg upgrade [пакет ...]</code></td><td>Комплексное обновление системы и всех приложений.</td></tr>
-<tr><td><code>pkg list-repo</code></td><td>Просмотр списка подключённых дополнительных репозиториев.</td></tr>
+<tr><td><code>pkg install &lt;пакет|файл&gt;</code></td><td>Установка приложений из репозиториев или файлов <code>.tar.zst</code>. Тяжелые приложения изолируются в контейнерах.</td></tr>
+<tr><td><code>pkg uninstall &lt;пакет&gt;</code></td><td>Удаление приложения и связанных данных.</td></tr>
+<tr><td><code>pkg list</code></td><td>Список установленных приложений в <code>/Applications</code>.</td></tr>
+<tr><td><code>pkg search &lt;текст&gt;</code></td><td>Поиск пакетов в репозиториях.</td></tr>
+<tr><td><code>pkg info &lt;пакет&gt;</code></td><td>Информация о пакете, зависимостях и размере.</td></tr>
+<tr><td><code>pkg update</code></td><td>Обновление баз данных пакетов.</td></tr>
+<tr><td><code>pkg upgrade [пакет ...]</code></td><td>Обновление системы и приложений.</td></tr>
+<tr><td><code>pkg list-repo</code></td><td>Список подключенных дополнительных репозиториев.</td></tr>
 <tr><td><code>pkg add-repo &lt;url&gt; [имя]</code></td><td>Подключение стороннего репозитория.</td></tr>
 <tr><td><code>pkg remove-repo &lt;имя&gt;</code></td><td>Удаление добавленного репозитория.</td></tr>
-<tr><td><code>pkg kernel [list|use &lt;имя&gt;]</code></td><td>Просмотр доступных ядер и переключение активного ядра на лету (<code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
-<tr><td><code>pkg sys &lt;аргументы pacman&gt;</code></td><td>Прямой вызов pacman на системном томе <code>/System</code>. Рекомендуется только для ядер, драйверов и сервисов.</td></tr>
-<tr><td><code>pkg change-desktop &lt;имя&gt;</code></td><td>Мгновенное переключение рабочего стола. Доступны: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
-<tr><td><code>pkg change-int &lt;имя&gt;</code></td><td>Переключение системного окружения (userland) между <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (утилиты BSD) и <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
+<tr><td><code>pkg kernel [list|use &lt;имя&gt;]</code></td><td>Просмотр и переключение активного ядра (<code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
+<tr><td><code>pkg sys &lt;аргументы pacman&gt;</code></td><td>Вызов pacman напрямую на томе <code>/System</code> для ядер, драйверов и служб.</td></tr>
+<tr><td><code>pkg change-desktop &lt;имя&gt;</code></td><td>Переключение рабочего стола: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
+<tr><td><code>pkg change-int &lt;имя&gt;</code></td><td>Переключение окружения утилит между <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (BSD) и <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
 <tr><td><code>pkg cleanup</code></td><td>Очистка кэша пакетов и временных файлов.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3 id="troubleshoot">Первая помощь и решение проблем</h3>
+<h3 id="troubleshoot">Первая помощь</h3>
 <ul>
-<li><b>Нет сети в виртуальной машине:</b> Рекомендуется использовать гипервизор QEMU/KVM с virtio-сетью либо вручную проверить наличие сетевого адаптера (Bridged/NAT) в настройках VM. Установщик при старте выводит сетевую диагностику.</li>
-<li><b>Флешка не загружается:</b> Отключите <b>Secure Boot</b> в настройках UEFI BIOS. Записывайте образ ISO строго в режиме DD (рекомендуется утилита <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> либо команда <code>dd</code>).</li>
-<li><b>Зависимость Steam и Wine от /bin:</b> Из-за жесткой привязки старых 32-битных программ к классическому <code>/bin</code>, в FasdeqOS используется контейнеризация (<a href="https://distrobox.it/" target="_blank">Distrobox</a>, Flatpak, Podman). Подробнее в Главах 4 и 5.</li>
+<li><b>Нет сети в виртуальной машине:</b> Убедитесь, что гипервизор выделил сетевой адаптер (VirtIO / NAT / Bridged). В QEMU используйте <code>-net nic,model=virtio -net user</code>.</li>
+<li><b>Флешка не загружается:</b> Отключите Secure Boot в UEFI. Записывайте ISO в режиме DD через <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> или <code>dd</code>.</li>
+<li><b>Steam и Wine:</b> Старые 32-битные библиотеки и программы запускаются через контейнеры <a href="https://distrobox.it/" target="_blank">Distrobox</a> (Главы 4 и 5).</li>
 </ul>
 </section>
 
 <section id="ch2">
 <h2>Глава 2 — Установка системы</h2>
-<p>Для большинства пользователей рекомендуется штатный автоматический установщик, стартующий сразу при загрузке Live-образа. Ручная установка полезна тем, кто хочет собрать систему под свои задачи, настроить шифрование или получить минимальный набор софта.</p>
+<p>Ручная установка позволяет настроить разметку диска, субтома и шифрование.</p>
 
-<h3>Пошаговый сценарий ручной установки</h3>
-<p>Загрузитесь в live-систему под root и выполните разметку диска (замените <code>/dev/sdX</code> на ваш диск):</p>
-
-<pre><code># 1. Разметка накопителя
-sgdisk --zap-all /dev/sdX
+<pre><code>sgdisk --zap-all /dev/sdX
 sgdisk -n1:0:+1M -t1:ef02 -n2:0:+512M -t2:ef00 -n3:0:0 -t3:8300 /dev/sdX
-
-# 2. Форматирование EFI и Btrfs
 mkfs.fat -F32 -n EFI /dev/sdX2
 mkfs.btrfs -L FasdeqOS /dev/sdX3
-
-# 3. Создание субтомов в стиле APFS
 mount /dev/sdX3 /mnt
 for v in root System Applications Library Users private; do
   btrfs subvolume create /mnt/$v
 done
 umount /mnt
-
-# 4. Монтирование томов с zstd-сжатием
 mount -o compress=zstd:1,subvol=root /dev/sdX3 /mnt
 mkdir -p /mnt/{System,Applications,Library,Users,private,Volumes,usr,lib,lib64,etc,var,tmp}
 for v in System Applications Library Users private; do
@@ -472,15 +437,11 @@ for v in System Applications Library Users private; do
 done
 mkdir -p /mnt/private/stage/boot
 mount /dev/sdX2 /mnt/private/stage/boot
+pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
 
-# 5. Базовое развертывание пакетов через pacstrap
-pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux \
-  kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
+<p>После базовой настройки в chroot перенесите файлы в структуру FasdeqOS:</p>
 
-<p>Затем выполните <code>arch-chroot</code> в папке stage (настройка локали, пользователей, хука initramfs <code>fasdeqos-disk</code> и GRUB) и переложите файлы в структуру FasdeqOS:</p>
-
-<pre><code># 6. Распаковка пейлоада и перенос файлов
-bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
+<pre><code>bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
 bsdtar -cpf - -C /mnt/private/stage/usr . | bsdtar -xpf - -C /mnt/System
 rm -rf /mnt/private/stage/usr
 mv /mnt/private/stage/etc /mnt/private/etc
@@ -490,118 +451,90 @@ rm -rf /mnt/private/stage</code></pre>
 </section>
 
 <section id="ch3">
-<h2>Глава 3 — Миграция с Arch-дистрибутивов</h2>
-<p>Если у вас уже установлен <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, <a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a> или экспериментальный <a href="https://github.com/" target="_blank">Omarchy</a>, вы можете перенести систему в структуру FasdeqOS без потери личных данных.</p>
+<h2>Глава 3 — Миграция с Arch</h2>
+<p>Миграция с <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, <a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a> или <a href="https://github.com/" target="_blank">Omarchy</a> без потери данных.</p>
 
 <h3>Требования</h3>
 <ul>
 <li>Дистрибутив на базе Arch Linux.</li>
-<li>Корневой раздел на файловой системе <b>Btrfs</b>.</li>
-<li>Режим UEFI и один из поддерживаемых загрузчиков: Limine, GRUB или systemd-boot.</li>
-<li>Права суперпользователя root.</li>
+<li>Корневой раздел Btrfs.</li>
+<li>UEFI и загрузчик Limine, GRUB или systemd-boot.</li>
+<li>Права root.</li>
 </ul>
-
-<h3>Технология клонирования Reflink</h3>
-<p>Недостающие тома создаются в существующем пуле Btrfs. Файлы клонируются через reflink, благодаря чему миграция не требует дополнительного свободного места на диске.</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Режим</th><th>Что происходит</th></tr></thead>
+<thead><tr><th>Режим</th><th>Действие</th></tr></thead>
 <tbody>
-<tr><td><b>Без бэкапа (Рекомендуется)</b></td><td>GNU-утилиты заменяются на chimerautils, приложения и игры переезжают в <code>/Applications</code>, pacman заменяется на <code>pkg</code>, а старая система автоматически удаляется после первой успешной загрузки.</td></tr>
-<tr><td><b>С бэкапом</b></td><td>Все данные копируются в <code>/Users</code> и новую структуру, а старая конфигурация полностью сохраняется на случай отката.</td></tr>
+<tr><td><b>Без бэкапа (Рекомендуется)</b></td><td>GNU-утилиты заменяются на chimerautils, софт переносится в <code>/Applications</code>, pacman заменяется на <code>pkg</code>, старая система удаляется после загрузки.</td></tr>
+<tr><td><b>С бэкапом</b></td><td>Данные дублируются в <code>/Users</code> и новую структуру, сохраняя старую систему.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>Команда для запуска скрипта</h3>
 <pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
 sudo -E bash fasdeqos-migrate</code></pre>
-<p>Исходный код скрипта доступен на <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>. Выберите нужные опции в меню мастера и перезагрузитесь.</p>
+<p>Скрипт на <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>.</p>
 </section>
 
 <section id="ch4">
 <h2>Глава 4 — Steam и игры</h2>
-<p>Для запуска Steam в изолированном, оптимизированном окружении без засорения хост-системы используется контейнер <a href="https://distrobox.it/" target="_blank">Distrobox</a> на базе производительного образа <a href="https://cachyos.org/" target="_blank">CachyOS v3</a>.</p>
+<p>Запуск Steam в изолированном контейнере <a href="https://distrobox.it/" target="_blank">Distrobox</a> на базе <a href="https://cachyos.org/" target="_blank">CachyOS v3</a>.</p>
 
-<h3>Шаг 1. Создание игрового контейнера</h3>
+<h4>Видеокарты NVIDIA:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
 
-<h4>Для видеокарт NVIDIA:</h4>
-<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam \
-  --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
+<h4>Видеокарты AMD / Intel:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
 
-<h4>Для видеокарт AMD / Intel:</h4>
-<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam \
-  --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
-
-<h3>Шаг 2. Вход в контейнер и установка Steam</h3>
-<pre><code># Вход в контейнер
-distrobox enter cachy-steam
-
-# Внутри контейнера: установка Steam
-sudo pacman -Syu steam</code></pre>
-
-<h3>Шаг 3. Экспорт ярлыка на хост</h3>
-<pre><code># Внутри контейнера: экспорт в меню приложений
+<h4>Установка и экспорт Steam:</h4>
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu steam
 distrobox-export --app steam</code></pre>
-<p>После этого Steam появится в стандартном меню приложений и на рабочем столе хост-системы с полной поддержкой GPU-ускорения.</p>
 </section>
 
 <section id="ch5">
-<h2>Глава 5 — Wine и Windows-программы</h2>
-<p>Запуск Windows-софта организуется через Wine прямо внутри созданного контейнера <code>cachy-steam</code>.</p>
+<h2>Глава 5 — Wine и Windows-софт</h2>
+<p>Установка Wine в контейнер <code>cachy-steam</code> и экспорт в пользовательский PATH хоста.</p>
 
-<h3>Шаг 1. Установка пакетов Wine в контейнере</h3>
-<p>Войдите в игровой контейнер и выполните:</p>
 <pre><code>distrobox enter cachy-steam
-sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm</code></pre>
-
-<h3>Шаг 2. Экспорт бинарников в PATH пользователя</h3>
-<pre><code>distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
+sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm
+distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
 distrobox-export --bin /usr/bin/winecfg --export-path ~/.local/bin
 distrobox-export --bin /usr/bin/winetricks --export-path ~/.local/bin</code></pre>
 
-<h3>Шаг 3. Настройка префикса Wine</h3>
-<p>Для первичной инициализации префикса выполните в терминале <code>winecfg</code>.</p>
-
-<h3>Шаг 4. Создание ярлыка (.desktop) для программы</h3>
-<p>Создайте файл ярлыка в пользовательском каталоге:</p>
+<h4>Ярлык приложения:</h4>
 <pre><code>nano /Users/$USER/.local/share/applications/myapp.desktop</code></pre>
 
-<p>Вставьте следующее содержимое:</p>
 <pre><code>[Desktop Entry]
 Name=Моя Windows Программа
 Exec=distrobox-enter -n cachy-steam -- wine "/path/to/program.exe"
 Type=Application
 Terminal=false
 Categories=Game;</code></pre>
-<p><i>В редакторе <code>nano</code>: нажмите <kbd>Ctrl+O</kbd> и <kbd>Enter</kbd> для сохранения, затем <kbd>Ctrl+X</kbd> для выхода.</i></p>
 </section>
 
 <section id="links">
-<h2>Системные ссылки из <code>/etc/os-release</code></h2>
+<h2>Системные ссылки</h2>
 <div class="table-wrap">
 <table>
 <thead><tr><th>Параметр</th><th>URL</th></tr></thead>
 <tbody>
 <tr><td>Главная страница</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
 <tr><td>Документация</td><td><a href="https://fasdeq13.github.io/fasdeq-os/#overview" target="_blank">https://fasdeq13.github.io/fasdeq-os/#overview</a></td></tr>
-<tr><td>Техподдержка</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
-<tr><td>Сообщить об ошибке</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
-<tr><td>Репозиторий GitHub</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
+<tr><td>Поддержка</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>Баг-репорты</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
+<tr><td>Репозиторий</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
 </tbody>
 </table>
 </div>
 </section>
-
 </div>
 
-<!-- ==================== ITALIAN VERSION ==================== -->
 <div data-lang="it">
-
 <div class="hero-box">
-<h1>Manuale Ufficiale e Wiki di FasdeqOS</h1>
-<p class="lead">Distribuzione Linux rolling-release che combina la potenza e la flessibilità di <a href="https://archlinux.org/" target="_blank">Arch Linux</a> con l'eleganza e l'intuitività della struttura file di macOS.</p>
+<h1>FasdeqOS Handbook</h1>
+<p class="lead">Distribuzione Linux rolling-release che unisce la potenza di <a href="https://archlinux.org/" target="_blank">Arch Linux</a> con l'intuitiva gerarchia dei file di macOS.</p>
 <div class="meta-pills">
 <span class="meta-pill">ID: <code>fasdeqos</code></span>
 <span class="meta-pill">Tipo: Rolling Release</span>
@@ -611,88 +544,78 @@ Categories=Game;</code></pre>
 </div>
 
 <section id="ch1">
-<h2>Capitolo 1 — Introduzione e Architettura</h2>
-<p><b>FasdeqOS</b> è un sistema operativo Linux open source basato su Arch Linux, progettato specificamente per facilitare il passaggio da macOS al mondo Linux. Mantiene intatti il <a href="https://www.kernel.org/" target="_blank">Kernel Linux</a> ufficiale, i driver hardware e systemd forniti da Arch, rivoluzionando completamente tutto il livello superiore: la gerarchia delle cartelle, lo spazio utente e la gestione del software.</p>
+<h2>Capitolo 1 — Introduzione e Struttura</h2>
+<p><b>FasdeqOS</b> è un sistema operativo Linux open source basato su Arch Linux, progettato per facilitare il passaggio da macOS a Linux. Mantiene il <a href="https://www.kernel.org/" target="_blank">Kernel Linux</a>, i driver hardware e systemd, riorganizzando lo spazio utente e la struttura delle cartelle.</p>
 
 <h3>Struttura del File System</h3>
-<p>Al posto delle caotiche cartelle UNIX tradizionali (<code>/usr/bin</code>, <code>/etc</code>, <code>/var</code>), FasdeqOS impiega i sottovolumi di <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs</a> per riprodurre fedelmente la gerarchia pulita di Apple APFS:</p>
+<p>FasdeqOS impiega i sottovolumi <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs</a> per riprodurre la gerarchia di Apple APFS:</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Cartella</th><th>Ruolo Sottovolume</th><th>Descrizione</th></tr></thead>
+<thead><tr><th>Cartella</th><th>Sottovolume</th><th>Descrizione</th></tr></thead>
 <tbody>
-<tr><td><code>/Applications</code></td><td>Applications</td><td>Applicazioni utente, bundle software autonomi, icone, file binari e dipendenze.</td></tr>
-<tr><td><code>/System</code></td><td>System</td><td>Volume di sistema contenente i file essenziali del sistema operativo e i demoni di base.</td></tr>
-<tr><td><code>/Library</code></td><td>Library</td><td>Librerie condivise, risorse di sistema, temi grafici e impostazioni globali.</td></tr>
-<tr><td><code>/Users</code></td><td>Users</td><td>Cartelle home degli utenti (es. <code>/Users/fasdeq</code>), file personali e configurazioni.</td></tr>
-<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Punti di montaggio per unità rimovibili USB, dischi secondari e condivisioni di rete.</td></tr>
-<tr><td><code>/boot</code></td><td>Boot volume</td><td>Bootloader UEFI (GRUB, Limine, systemd-boot) e immagini del kernel compresse.</td></tr>
-<tr><td><code>/root</code></td><td>Root Home</td><td>Cartella home dell'amministratore (superuser).</td></tr>
+<tr><td><code>/Applications</code></td><td>Applications</td><td>Applicazioni utente, file binari, icone e dipendenze isolate.</td></tr>
+<tr><td><code>/System</code></td><td>System</td><td>Volume di sistema con binari di base e demoni essenziali.</td></tr>
+<tr><td><code>/Library</code></td><td>Library</td><td>Librerie condivise, risorse di sistema e impostazioni globali.</td></tr>
+<tr><td><code>/Users</code></td><td>Users</td><td>Cartelle home degli utenti, documenti e configurazioni personali.</td></tr>
+<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Punti di montaggio per unità rimovibili USB e dischi secondari.</td></tr>
+<tr><td><code>/boot</code></td><td>Boot volume</td><td>Bootloader UEFI (GRUB, Limine, systemd-boot) e immagini kernel.</td></tr>
+<tr><td><code>/root</code></td><td>Root Home</td><td>Cartella home dell'amministratore superuser.</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="callout info">
-<b>Isolamento Trasparente:</b> Le directory legacy come <code>/usr</code> ed <code>/etc</code> sono protette e montate internamente in volumi di stage privati, garantendo piena compatibilità binaria con i programmi Linux standard.
+Le cartelle UNIX legacy come <code>/usr</code> ed <code>/etc</code> sono protette in livelli isolati per garantire la piena compatibilità.
 </div>
 
 <h3 id="pkg">Gestore dei Pacchetti: <code>pkg</code></h3>
-<p>Il gestore <code>pkg</code> offre una sintassi intuitiva in stile BSD, fungendo da wrapper avanzato per <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a>.</p>
+<p>Il gestore <code>pkg</code> fornisce una sintassi stile BSD sopra <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a>.</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Comando</th><th>Funzionalità e Spiegazione</th></tr></thead>
+<thead><tr><th>Comando</th><th>Descrizione</th></tr></thead>
 <tbody>
-<tr><td><code>pkg install &lt;pacchetto|file&gt;</code></td><td>Installa applicazioni dai repository o da pacchetti <code>.tar.zst</code> locali. Le applicazioni pesanti vengono isolate automaticamente in container.</td></tr>
-<tr><td><code>pkg uninstall &lt;pacchetto&gt;</code></td><td>Rimuove l'applicazione specificata e pulisce i metadati.</td></tr>
-<tr><td><code>pkg list</code></td><td>Mostra tutte le applicazioni installate in <code>/Applications</code>.</td></tr>
-<tr><td><code>pkg search &lt;testo&gt;</code></td><td>Cerca i pacchetti disponibili tramite parole chiave nei repository.</td></tr>
-<tr><td><code>pkg info &lt;pacchetto&gt;</code></td><td>Visualizza dettagli, dipendenze e dimensioni del pacchetto.</td></tr>
-<tr><td><code>pkg update</code></td><td>Aggiorna i database dei pacchetti e i mirror.</td></tr>
-<tr><td><code>pkg upgrade [pacchetto ...]</code></td><td>Esegue l'aggiornamento completo di sistema e applicazioni.</td></tr>
-<tr><td><code>pkg list-repo</code></td><td>Elenca i repository aggiuntivi configurati.</td></tr>
-<tr><td><code>pkg add-repo &lt;url&gt; [nome]</code></td><td>Aggiunge un repository di terze parti al sistema.</td></tr>
-<tr><td><code>pkg remove-repo &lt;nome&gt;</code></td><td>Rimuove un repository configurato.</td></tr>
-<tr><td><code>pkg kernel [list|use &lt;nome&gt;]</code></td><td>Mostra o cambia il kernel Linux attivo al volo (es. <code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
-<tr><td><code>pkg sys &lt;argomenti pacman&gt;</code></td><td>Esegue pacman direttamente sul volume di sistema <code>/System</code>. Consigliato esclusivamente per driver, kernel e servizi di base.</td></tr>
-<tr><td><code>pkg change-desktop &lt;nome&gt;</code></td><td>Cambia l'ambiente desktop attivo. Supportati: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
-<tr><td><code>pkg change-int &lt;nome&gt;</code></td><td>Cambia le utility dello spazio utente tra <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (utility BSD) e <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
-<tr><td><code>pkg cleanup</code></td><td>Pulisce la cache dei pacchetti e i file temporanei.</td></tr>
+<tr><td><code>pkg install &lt;pacchetto|file&gt;</code></td><td>Installa applicazioni da repository o pacchetti <code>.tar.zst</code> locali con containerizzazione automatica per app pesanti.</td></tr>
+<tr><td><code>pkg uninstall &lt;pacchetto&gt;</code></td><td>Rimuove l'applicazione specificata.</td></tr>
+<tr><td><code>pkg list</code></td><td>Elenca le applicazioni installate in <code>/Applications</code>.</td></tr>
+<tr><td><code>pkg search &lt;testo&gt;</code></td><td>Cerca pacchetti nei repository.</td></tr>
+<tr><td><code>pkg info &lt;pacchetto&gt;</code></td><td>Mostra metadati, dipendenze e dimensioni.</td></tr>
+<tr><td><code>pkg update</code></td><td>Aggiorna i database dei repository.</td></tr>
+<tr><td><code>pkg upgrade [pacchetto ...]</code></td><td>Aggiorna sistema e applicazioni.</td></tr>
+<tr><td><code>pkg list-repo</code></td><td>Elenca i repository configurati.</td></tr>
+<tr><td><code>pkg add-repo &lt;url&gt; [nome]</code></td><td>Aggiunge un repository.</td></tr>
+<tr><td><code>pkg remove-repo &lt;nome&gt;</code></td><td>Rimuove un repository.</td></tr>
+<tr><td><code>pkg kernel [list|use &lt;nome&gt;]</code></td><td>Visualizza o cambia il kernel Linux attivo (<code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
+<tr><td><code>pkg sys &lt;argomenti pacman&gt;</code></td><td>Esegue pacman direttamente sul volume <code>/System</code> per driver, kernel e servizi.</td></tr>
+<tr><td><code>pkg change-desktop &lt;nome&gt;</code></td><td>Cambia ambiente desktop: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
+<tr><td><code>pkg change-int &lt;nome&gt;</code></td><td>Cambia le utility tra <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (BSD) e <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
+<tr><td><code>pkg cleanup</code></td><td>Pulisce la cache dei pacchetti.</td></tr>
 </tbody>
 </table>
 </div>
 
 <h3 id="troubleshoot">Risoluzione dei Problemi</h3>
 <ul>
-<li><b>Assenza di rete nelle Macchine Virtuali:</b> Verifica che la macchina virtuale abbia una scheda di rete attiva assegnata (VirtIO o NAT/Bridge). Con QEMU usa <code>-net nic,model=virtio -net user</code>. L'installer esegue un test diagnostico all'avvio.</li>
-<li><b>L'unità USB non si avvia:</b> Disattiva il <b>Secure Boot</b> nel BIOS/UEFI. Scrivi l'immagine ISO in modalità raw DD (consigliati <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> o il comando <code>dd</code>).</li>
-<li><b>Compatibilità con Steam e Wine:</b> Le vecchie librerie a 32 bit e i giochi dipendono fortemente dai percorsi in <code>/bin</code>. FasdeqOS gestisce questi carichi in container (<a href="https://distrobox.it/" target="_blank">Distrobox</a>, Flatpak, Podman). Vedi Capitoli 4 e 5.</li>
+<li><b>Assenza di rete nelle VM:</b> Assegna una scheda di rete VirtIO o NAT. In QEMU usa <code>-net nic,model=virtio -net user</code>.</li>
+<li><b>L'USB non si avvia:</b> Disattiva Secure Boot nel BIOS UEFI. Scrivi la ISO in modalità DD con <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> o <code>dd</code>.</li>
+<li><b>Steam e Wine:</b> I carichi legacy a 32 bit vengono eseguiti tramite container <a href="https://distrobox.it/" target="_blank">Distrobox</a> (Capitoli 4 e 5).</li>
 </ul>
 </section>
 
 <section id="ch2">
-<h2>Capitolo 2 — Guida all'Installazione</h2>
-<p>L'installer grafico/testuale si avvia automaticamente all'avvio dell'ISO. Se desideri personalizzare le partizioni, impostare la crittografia o ottenere un'installazione minima, segui la procedura manuale sottostante.</p>
+<h2>Capitolo 2 — Installazione</h2>
+<p>Procedura per installazione manuale e partizionamento personalizzato.</p>
 
-<h3>Procedura di Installazione Manuale</h3>
-<p>Avvia il sistema live come utente root e prepara il disco (sostituisci <code>/dev/sdX</code> con l'identificativo del tuo disco):</p>
-
-<pre><code># 1. Partizionamento del disco
-sgdisk --zap-all /dev/sdX
+<pre><code>sgdisk --zap-all /dev/sdX
 sgdisk -n1:0:+1M -t1:ef02 -n2:0:+512M -t2:ef00 -n3:0:0 -t3:8300 /dev/sdX
-
-# 2. Formattazione partizioni EFI e Btrfs
 mkfs.fat -F32 -n EFI /dev/sdX2
 mkfs.btrfs -L FasdeqOS /dev/sdX3
-
-# 3. Creazione dei sottovolumi Btrfs
 mount /dev/sdX3 /mnt
 for v in root System Applications Library Users private; do
   btrfs subvolume create /mnt/$v
 done
 umount /mnt
-
-# 4. Montaggio dei volumi con compressione zstd
 mount -o compress=zstd:1,subvol=root /dev/sdX3 /mnt
 mkdir -p /mnt/{System,Applications,Library,Users,private,Volumes,usr,lib,lib64,etc,var,tmp}
 for v in System Applications Library Users private; do
@@ -700,15 +623,11 @@ for v in System Applications Library Users private; do
 done
 mkdir -p /mnt/private/stage/boot
 mount /dev/sdX2 /mnt/private/stage/boot
+pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
 
-# 5. Bootstrap del sistema base con pacstrap
-pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux \
-  kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
+<p>Configura l'ambiente in chroot ed estrai il payload nella gerarchia FasdeqOS:</p>
 
-<p>Accedi a chroot nella cartella stage (imposta lingua, utenti, hook initramfs <code>fasdeqos-disk</code> e GRUB), quindi riorganizza i file nella struttura di FasdeqOS:</p>
-
-<pre><code># 6. Estrazione del payload e posizionamento finale
-bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
+<pre><code>bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
 bsdtar -cpf - -C /mnt/private/stage/usr . | bsdtar -xpf - -C /mnt/System
 rm -rf /mnt/private/stage/usr
 mv /mnt/private/stage/etc /mnt/private/etc
@@ -718,109 +637,456 @@ rm -rf /mnt/private/stage</code></pre>
 </section>
 
 <section id="ch3">
-<h2>Capitolo 3 — Migrazione da Distribuzioni Basate su Arch</h2>
-<p>Se hai già un'installazione di <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, <a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a> o <a href="https://github.com/" target="_blank">Omarchy</a> (sperimentale), puoi migrare a FasdeqOS senza perdere i tuoi file personali.</p>
+<h2>Capitolo 3 — Migrazione da Arch</h2>
+<p>Migra da <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, <a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a> o <a href="https://github.com/" target="_blank">Omarchy</a> senza perdita di dati.</p>
 
 <h3>Requisiti</h3>
 <ul>
-<li>Sistema basato su Arch Linux.</li>
-<li>Partizione radice formattata su <b>Btrfs</b>.</li>
-<li>Ambiente UEFI con bootloader Limine, GRUB o systemd-boot.</li>
-<li>Privilegi di root.</li>
+<li>Distribuzione basata su Arch Linux.</li>
+<li>Partizione radice Btrfs.</li>
+<li>UEFI con Limine, GRUB o systemd-boot.</li>
+<li>Permessi di root.</li>
 </ul>
-
-<h3>Clonazione Istantanea Reflink</h3>
-<p>I sottovolumi mancanti vengono creati nel pool Btrfs esistente. I file vengono clonati tramite reflink Btrfs, evitando qualsiasi consumo aggiuntivo di spazio su disco.</p>
 
 <div class="table-wrap">
 <table>
-<thead><tr><th>Modalità</th><th>Dettagli operazione</th></tr></thead>
+<thead><tr><th>Modalità</th><th>Operazione</th></tr></thead>
 <tbody>
-<tr><td><b>Senza backup (Consigliata)</b></td><td>Le utility GNU vengono sostituite da chimerautils, app e giochi passano a <code>/Applications</code>, pacman viene sostituito da <code>pkg</code>, e il vecchio sistema viene rimosso al primo avvio riuscito.</td></tr>
-<tr><td><b>Con backup</b></td><td>I dati vengono duplicati in <code>/Users</code> e nella nuova gerarchia, lasciando intatto il vecchio sistema.</td></tr>
+<tr><td><b>Senza backup (Consigliata)</b></td><td>Le utility GNU vengono sostituite da chimerautils, app spostate in <code>/Applications</code>, pacman sostituito da <code>pkg</code>, vecchio sistema rimosso dopo il riavvio.</td></tr>
+<tr><td><b>Con backup</b></td><td>I dati vengono duplicati in <code>/Users</code> e nella nuova gerarchia preservando il vecchio sistema.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>Esecuzione dello Script</h3>
 <pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
 sudo -E bash fasdeqos-migrate</code></pre>
-<p>Visualizza il codice su <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>. Seleziona le impostazioni desiderate e riavvia il computer.</p>
+<p>Script su <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>.</p>
 </section>
 
 <section id="ch4">
 <h2>Capitolo 4 — Steam e Gaming</h2>
-<p>Per eseguire Steam mantenendo pulito il sistema host, utilizziamo un container <a href="https://distrobox.it/" target="_blank">Distrobox</a> basato sull'immagine ottimizzata di <a href="https://cachyos.org/" target="_blank">CachyOS v3</a>.</p>
+<p>Esecuzione di Steam in un container <a href="https://distrobox.it/" target="_blank">Distrobox</a> su base <a href="https://cachyos.org/" target="_blank">CachyOS v3</a>.</p>
 
-<h3>Passo 1. Creazione del Container</h3>
+<h4>GPU NVIDIA:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
 
-<h4>Per GPU NVIDIA:</h4>
-<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam \
-  --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
+<h4>GPU AMD / Intel:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
 
-<h4>Per GPU AMD / Intel:</h4>
-<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam \
-  --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
-
-<h3>Passo 2. Accesso e Installazione di Steam</h3>
-<pre><code># Entra nel container
-distrobox enter cachy-steam
-
-# Installa Steam all'interno del container
-sudo pacman -Syu steam</code></pre>
-
-<h3>Passo 3. Esportazione dell'Applicazione</h3>
-<pre><code># Esporta il collegamento nell'ambiente desktop dell'host
+<h4>Installazione ed esportazione di Steam:</h4>
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu steam
 distrobox-export --app steam</code></pre>
-<p>L'icona di Steam comparirà direttamente nel menu applicazioni con pieno accesso all'accelerazione grafica hardware.</p>
 </section>
 
 <section id="ch5">
-<h2>Capitolo 5 — Wine e Applicazioni Windows</h2>
-<p>Esegui programmi e giochi Windows nativi tramite Wine nel container <code>cachy-steam</code>.</p>
+<h2>Capitolo 5 — Wine e App Windows</h2>
+<p>Installazione di Wine nel container <code>cachy-steam</code> ed esportazione dei file binari nel PATH host.</p>
 
-<h3>Passo 1. Installazione di Wine nel Container</h3>
 <pre><code>distrobox enter cachy-steam
-sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm</code></pre>
-
-<h3>Passo 2. Esportazione dei Binari nel PATH Utente</h3>
-<pre><code>distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
+sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm
+distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
 distrobox-export --bin /usr/bin/winecfg --export-path ~/.local/bin
 distrobox-export --bin /usr/bin/winetricks --export-path ~/.local/bin</code></pre>
 
-<h3>Passo 3. Inizializzazione del Prefisso Wine</h3>
-<p>Esegui <code>winecfg</code> nel terminale per generare il prefisso <code>~/.wine</code>.</p>
-
-<h3>Passo 4. Creazione del File di Avvio (.desktop)</h3>
-<p>Crea il file di avvio desktop nella cartella utente:</p>
+<h4>Collegamento Desktop:</h4>
 <pre><code>nano /Users/$USER/.local/share/applications/myapp.desktop</code></pre>
 
-<p>Inserisci la seguente configurazione:</p>
 <pre><code>[Desktop Entry]
 Name=La Mia Applicazione Windows
 Exec=distrobox-enter -n cachy-steam -- wine "/path/to/program.exe"
 Type=Application
 Terminal=false
 Categories=Game;</code></pre>
-<p><i>Con <code>nano</code>: premi <kbd>Ctrl+O</kbd> e <kbd>Invio</kbd> per salvare, poi <kbd>Ctrl+X</kbd> per uscire.</i></p>
 </section>
 
 <section id="links">
-<h2>Riferimenti di Sistema da <code>/etc/os-release</code></h2>
+<h2>Collegamenti di Sistema</h2>
 <div class="table-wrap">
 <table>
 <thead><tr><th>Proprietà</th><th>URL</th></tr></thead>
 <tbody>
-<tr><td>Sito Ufficiale</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>Sito Web</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
 <tr><td>Documentazione</td><td><a href="https://fasdeq13.github.io/fasdeq-os/#overview" target="_blank">https://fasdeq13.github.io/fasdeq-os/#overview</a></td></tr>
 <tr><td>Supporto</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
 <tr><td>Segnalazione Bug</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
-<tr><td>Repository GitHub</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
+<tr><td>Repository</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
 </tbody>
 </table>
 </div>
 </section>
+</div>
 
+<div data-lang="uk">
+<div class="hero-box">
+<h1>FasdeqOS Handbook</h1>
+<p class="lead">Дистрибутив Linux зі скользячою моделлю оновлень (rolling release), що поєднує можливості <a href="https://archlinux.org/" target="_blank">Arch Linux</a> зі зручною файловою ієрархією macOS.</p>
+<div class="meta-pills">
+<span class="meta-pill">ID: <code>fasdeqos</code></span>
+<span class="meta-pill">Тип: Rolling Release</span>
+<span class="meta-pill">Основа: Arch Linux + Linux Kernel</span>
+<span class="meta-pill">Файлова система: Btrfs (APFS-модель)</span>
+</div>
+</div>
+
+<section id="ch1">
+<h2>Глава 1 — Вступ та файлова структура</h2>
+<p><b>FasdeqOS</b> — відкрита операційна система Linux на базі Arch Linux, створена для плавного переходу з macOS на Linux. Вона зберігає оригінальне ядро <a href="https://www.kernel.org/" target="_blank">Linux</a>, драйвери та systemd від Arch, повністю оновлюючи структуру каталогів та керування софтом.</p>
+
+<h3>Структура файлів</h3>
+<p>FasdeqOS застосовує субтоми <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs</a> для відтворення файлової структури Apple APFS:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Каталог</th><th>Субтом</th><th>Призначення</th></tr></thead>
+<tbody>
+<tr><td><code>/Applications</code></td><td>Applications</td><td>Папка застосунків користувача, ізольовані пакунки, іконки, бінарники та залежності.</td></tr>
+<tr><td><code>/System</code></td><td>System</td><td>Системний том операційної системи, базові файли ОС та системні служби.</td></tr>
+<tr><td><code>/Library</code></td><td>Library</td><td>Бібліотеки, загальносистемні ресурси, теми оформлення та глобальні налаштування.</td></tr>
+<tr><td><code>/Users</code></td><td>Users</td><td>Домашні теки користувачів, особисті файли, документи та конфігурації.</td></tr>
+<tr><td><code>/Volumes</code></td><td>Volumes</td><td>Точки монтування зовнішніх накопичувачів, флешок і мережевих сховищ.</td></tr>
+<tr><td><code>/boot</code></td><td>Boot volume</td><td>Завантажувачі (GRUB, Limine, systemd-boot) та стислі образи ядер Linux.</td></tr>
+<tr><td><code>/root</code></td><td>Root Home</td><td>Домашній каталог суперкористувача root.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout info">
+Стандартні теки <code>/usr</code>, <code>/etc</code> та <code>/var</code> приховані та змонтовані всередині ізольованих рівнів, зберігаючи повну сумісність.
+</div>
+
+<h3 id="pkg">Пакетний менеджер <code>pkg</code></h3>
+<p>У системі працює пакетний менеджер <code>pkg</code> з BSD-подібним синтаксисом як надбудова над <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a>.</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Команда</th><th>Опис</th></tr></thead>
+<tbody>
+<tr><td><code>pkg install &lt;пакет|файл&gt;</code></td><td>Встановлення застосунків з репозиторіїв або файлів <code>.tar.zst</code> з автоматичною контейнеризацією важких програм.</td></tr>
+<tr><td><code>pkg uninstall &lt;пакет&gt;</code></td><td>Вилучення встановленого застосунку.</td></tr>
+<tr><td><code>pkg list</code></td><td>Список встановлених застосунків у <code>/Applications</code>.</td></tr>
+<tr><td><code>pkg search &lt;текст&gt;</code></td><td>Пошук пакунків у репозиторіях.</td></tr>
+<tr><td><code>pkg info &lt;пакет&gt;</code></td><td>Інформація про пакунок, залежності та розмір.</td></tr>
+<tr><td><code>pkg update</code></td><td>Оновлення баз даних пакунків.</td></tr>
+<tr><td><code>pkg upgrade [пакет ...]</code></td><td>Оновлення системи та застосунків.</td></tr>
+<tr><td><code>pkg list-repo</code></td><td>Список підключених додаткових репозиторіїв.</td></tr>
+<tr><td><code>pkg add-repo &lt;url&gt; [ім'я]</code></td><td>Додавання репозиторію до системи.</td></tr>
+<tr><td><code>pkg remove-repo &lt;ім'я&gt;</code></td><td>Вилучення налаштованого репозиторію.</td></tr>
+<tr><td><code>pkg kernel [list|use &lt;ім'я&gt;]</code></td><td>Перегляд і перемикання активного ядра (<code>linux</code>, <code>linux-cachyos</code>, <code>linux-zen</code>).</td></tr>
+<tr><td><code>pkg sys &lt;аргументи pacman&gt;</code></td><td>Виклик pacman безпосередньо на томі <code>/System</code> для ядер, драйверів і служб.</td></tr>
+<tr><td><code>pkg change-desktop &lt;ім'я&gt;</code></td><td>Перемикання стільничного середовища: <code>plasma</code>, <code>gnome</code>, <code>cosmic</code>, <code>hyprland</code>, <code>niri</code>, <code>xfce</code>, <code>cinnamon</code>, <code>mate</code>, <code>lxqt</code>.</td></tr>
+<tr><td><code>pkg change-int &lt;ім'я&gt;</code></td><td>Перемикання набору утиліт між <a href="https://chimera-linux.org/" target="_blank">chimerautils</a> (BSD) та <a href="https://busybox.net/" target="_blank">BusyBox</a>.</td></tr>
+<tr><td><code>pkg cleanup</code></td><td>Очищення кешу пакунків і тимчасових файлів.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="troubleshoot">Вирішення проблем</h3>
+<ul>
+<li><b>Немає мережі у віртуальній машині:</b> Призначте машині мережевий адаптер VirtIO або NAT. Для QEMU використовуйте <code>-net nic,model=virtio -net user</code>.</li>
+<li><b>Флешка не завантажується:</b> Вимкніть Secure Boot в UEFI. Записуйте ISO в режимі DD через <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> або <code>dd</code>.</li>
+<li><b>Steam та Wine:</b> 32-бітні ігри та програми ізолюються за допомогою контейнерів <a href="https://distrobox.it/" target="_blank">Distrobox</a> (Глави 4 та 5).</li>
+</ul>
+</section>
+
+<section id="ch2">
+<h2>Глава 2 — Встановлення системи</h2>
+<p>Ручне встановлення системи для гнучкого налаштування дисків і розділів.</p>
+
+<pre><code>sgdisk --zap-all /dev/sdX
+sgdisk -n1:0:+1M -t1:ef02 -n2:0:+512M -t2:ef00 -n3:0:0 -t3:8300 /dev/sdX
+mkfs.fat -F32 -n EFI /dev/sdX2
+mkfs.btrfs -L FasdeqOS /dev/sdX3
+mount /dev/sdX3 /mnt
+for v in root System Applications Library Users private; do
+  btrfs subvolume create /mnt/$v
+done
+umount /mnt
+mount -o compress=zstd:1,subvol=root /dev/sdX3 /mnt
+mkdir -p /mnt/{System,Applications,Library,Users,private,Volumes,usr,lib,lib64,etc,var,tmp}
+for v in System Applications Library Users private; do
+  mount -o compress=zstd:1,subvol=$v /dev/sdX3 /mnt/$v
+done
+mkdir -p /mnt/private/stage/boot
+mount /dev/sdX2 /mnt/private/stage/boot
+pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
+
+<p>Після налаштування системи в chroot перенесіть файли у структуру FasdeqOS:</p>
+
+<pre><code>bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
+bsdtar -cpf - -C /mnt/private/stage/usr . | bsdtar -xpf - -C /mnt/System
+rm -rf /mnt/private/stage/usr
+mv /mnt/private/stage/etc /mnt/private/etc
+mv /mnt/private/stage/var /mnt/private/var
+mv /mnt/private/stage/root /mnt/private/var/root
+rm -rf /mnt/private/stage</code></pre>
+</section>
+
+<section id="ch3">
+<h2>Глава 3 — Міграція з Arch</h2>
+<p>Перенесення з <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, <a href="https://manjaro.org/" target="_blank">Manjaro</a>, <a href="https://garudalinux.org/" target="_blank">Garuda</a>, <a href="https://cachyos.org/" target="_blank">CachyOS</a> або <a href="https://github.com/" target="_blank">Omarchy</a> без втрати особистих файлів.</p>
+
+<h3>Вимоги</h3>
+<ul>
+<li>Дистрибутив на базі Arch Linux.</li>
+<li>Кореневий розділ Btrfs.</li>
+<li>UEFI та завантажувач Limine, GRUB або systemd-boot.</li>
+<li>Права root.</li>
+</ul>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Режим</th><th>Дія</th></tr></thead>
+<tbody>
+<tr><td><b>Без бекапу (Рекомендовано)</b></td><td>Утиліти GNU замінюються на chimerautils, програми переїжджають в <code>/Applications</code>, pacman замінюється на <code>pkg</code>, стара система вилучається після завантаження.</td></tr>
+<tr><td><b>З бекапом</b></td><td>Файли дублюються в <code>/Users</code> і нову структуру зі збереженням старої конфігурації.</td></tr>
+</tbody>
+</table>
+</div>
+
+<pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
+sudo -E bash fasdeqos-migrate</code></pre>
+<p>Скрипт на <a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>.</p>
+</section>
+
+<section id="ch4">
+<h2>Глава 4 — Steam та ігри</h2>
+<p>Запуск ігор та Steam в ізольованому контейнері <a href="https://distrobox.it/" target="_blank">Distrobox</a> на базі <a href="https://cachyos.org/" target="_blank">CachyOS v3</a>.</p>
+
+<h4>Відеокарти NVIDIA:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
+
+<h4>Відеокарти AMD / Intel:</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
+
+<h4>Встановлення та експорт Steam:</h4>
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu steam
+distrobox-export --app steam</code></pre>
+</section>
+
+<section id="ch5">
+<h2>Глава 5 — Wine та програми Windows</h2>
+<p>Встановлення Wine у контейнері <code>cachy-steam</code> та експорт бінарників у PATH хоста.</p>
+
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm
+distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
+distrobox-export --bin /usr/bin/winecfg --export-path ~/.local/bin
+distrobox-export --bin /usr/bin/winetricks --export-path ~/.local/bin</code></pre>
+
+<h4>Ярлик застосунку:</h4>
+<pre><code>nano /Users/$USER/.local/share/applications/myapp.desktop</code></pre>
+
+<pre><code>[Desktop Entry]
+Name=Моя Windows Програма
+Exec=distrobox-enter -n cachy-steam -- wine "/path/to/program.exe"
+Type=Application
+Terminal=false
+Categories=Game;</code></pre>
+</section>
+
+<section id="links">
+<h2>Системні посилання</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Параметр</th><th>URL</th></tr></thead>
+<tbody>
+<tr><td>Головна сторінка</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>Документація</td><td><a href="https://fasdeq13.github.io/fasdeq-os/#overview" target="_blank">https://fasdeq13.github.io/fasdeq-os/#overview</a></td></tr>
+<tr><td>Підтримка</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>Повідомити про помилку</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
+<tr><td>Репозиторій</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+
+<div data-lang="zh">
+<div class="hero-box">
+<h1>FasdeqOS Handbook</h1>
+<p class="lead">基于 <a href="https://archlinux.org/" target="_blank">Arch Linux</a> 的开源滚动发行版，将纯正的 Arch 性能与直观清晰的 macOS 目录结构融为一体。</p>
+<div class="meta-pills">
+<span class="meta-pill">ID: <code>fasdeqos</code></span>
+<span class="meta-pill">类型: Rolling Release</span>
+<span class="meta-pill">基底: Arch Linux + Linux Kernel</span>
+<span class="meta-pill">文件系统: Btrfs (APFS 模式)</span>
+</div>
+</div>
+
+<section id="ch1">
+<h2>第 1 章 — 简介与系统架构</h2>
+<p><b>FasdeqOS</b> 是基于 Arch Linux 构建的开源 Linux 发行版，旨在让用户能够从 macOS 平滑过渡到 Linux。系统保留官方 <a href="https://www.kernel.org/" target="_blank">Linux Kernel</a>、硬件驱动与 systemd 架构，同时将上层文件目录及软件管理重构为现代化的类 macOS 结构。</p>
+
+<h3>文件系统目录结构</h3>
+<p>FasdeqOS 利用 <a href="https://btrfs.readthedocs.io/" target="_blank">Btrfs 子卷</a> 模拟 Apple APFS 的清晰层次结构：</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>目录</th><th>子卷</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><code>/Applications</code></td><td>Applications</td><td>用户应用程序目录，包含独立应用包、图标、二进制程序及隔离依赖。</td></tr>
+<tr><td><code>/System</code></td><td>System</td><td>操作系统根卷，存放系统核心程序及核心服务。</td></tr>
+<tr><td><code>/Library</code></td><td>Library</td><td>系统级共享资源、框架、桌面主题与全局配置文件。</td></tr>
+<tr><td><code>/Users</code></td><td>Users</td><td>用户家目录、个人数据、文档及私人配置。</td></tr>
+<tr><td><code>/Volumes</code></td><td>Volumes</td><td>外接可移动驱动器、扩展分区及网络共享挂载点。</td></tr>
+<tr><td><code>/boot</code></td><td>Boot volume</td><td>UEFI 引导程序（GRUB、Limine、systemd-boot）与压缩内核镜像。</td></tr>
+<tr><td><code>/root</code></td><td>Root Home</td><td>超级管理员 root 的家目录。</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout info">
+<code>/usr</code> 和 <code>/etc</code> 等传统 Linux 目录挂载在底层隔离层中，确保软件生态的完全兼容。
+</div>
+
+<h3 id="pkg">软件包管理器 <code>pkg</code></h3>
+<p>FasdeqOS 配备了采用 BSD 语法的专属 <code>pkg</code> 软件包管理器，底层调用 <a href="https://wiki.archlinux.org/title/Pacman" target="_blank">pacman</a> 引擎。</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>命令</th><th>功能说明</th></tr></thead>
+<tbody>
+<tr><td><code>pkg install &lt;包名|文件&gt;</code></td><td>从软件源或本地 <code>.tar.zst</code> 安装应用。重量级程序自动在隔离容器中运行。</td></tr>
+<tr><td><code>pkg uninstall &lt;包名&gt;</code></td><td>卸载指定应用并清理元数据。</td></tr>
+<tr><td><code>pkg list</code></td><td>列出 <code>/Applications</code> 中已安装的应用程序。</td></tr>
+<tr><td><code>pkg search &lt;关键词&gt;</code></td><td>在软件源中搜索匹配软件包。</td></tr>
+<tr><td><code>pkg info &lt;包名&gt;</code></td><td>显示软件包详情、依赖与大小。</td></tr>
+<tr><td><code>pkg update</code></td><td>刷新软件源镜像与同步数据库。</td></tr>
+<tr><td><code>pkg upgrade [包名 ...]</code></td><td>全面升级系统及所有已安装应用。</td></tr>
+<tr><td><code>pkg list-repo</code></td><td>查看已配置的扩展软件源列表。</td></tr>
+<tr><td><code>pkg add-repo &lt;url&gt; [名称]</code></td><td>添加第三方软件仓库。</td></tr>
+<tr><td><code>pkg remove-repo &lt;名称&gt;</code></td><td>移除指定的软件源。</td></tr>
+<tr><td><code>pkg kernel [list|use &lt;名称&gt;]</code></td><td>查看并即时切换运行内核（如 <code>linux</code>、<code>linux-cachyos</code>、<code>linux-zen</code>）。</td></tr>
+<tr><td><code>pkg sys &lt;pacman 参数&gt;</code></td><td>直接在底层 <code>/System</code> 卷上调用 pacman，建议仅用于内核、驱动和底层服务。</td></tr>
+<tr><td><code>pkg change-desktop &lt;名称&gt;</code></td><td>快速切换桌面环境：<code>plasma</code>、<code>gnome</code>、<code>cosmic</code>、<code>hyprland</code>、<code>niri</code>、<code>xfce</code>、<code>cinnamon</code>、<code>mate</code>、<code>lxqt</code>。</td></tr>
+<tr><td><code>pkg change-int &lt;名称&gt;</code></td><td>在 <a href="https://chimera-linux.org/" target="_blank">chimerautils</a>（BSD 工具链）与 <a href="https://busybox.net/" target="_blank">BusyBox</a> 之间切换用户态环境。</td></tr>
+<tr><td><code>pkg cleanup</code></td><td>清理本地软件包缓存及临时文件。</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="troubleshoot">疑难解答</h3>
+<ul>
+<li><b>虚拟机无网络连接：</b> 请确保虚拟机分配了网卡适配器（VirtIO / NAT / 桥接）。使用 QEMU 时添加 <code>-net nic,model=virtio -net user</code>。</li>
+<li><b>U 盘无法引导：</b> 在电脑 UEFI/BIOS 中关闭 Secure Boot。使用 <a href="https://etcher.balena.io/" target="_blank">Balena Etcher</a> 或 <code>dd</code> 以原始 DD 模式写入 ISO。</li>
+<li><b>Steam 与 Wine 兼容性：</b> 传统 32 位程序依赖 <code>/bin</code> 路径，FasdeqOS 使用 <a href="https://distrobox.it/" target="_blank">Distrobox</a> 容器进行隔离运行（参见第 4 与第 5 章）。</li>
+</ul>
+</section>
+
+<section id="ch2">
+<h2>第 2 章 — 系统安装指南</h2>
+<p>通过手动安装流程，可进行自定义分区、多子卷划分或最小化安装。</p>
+
+<pre><code>sgdisk --zap-all /dev/sdX
+sgdisk -n1:0:+1M -t1:ef02 -n2:0:+512M -t2:ef00 -n3:0:0 -t3:8300 /dev/sdX
+mkfs.fat -F32 -n EFI /dev/sdX2
+mkfs.btrfs -L FasdeqOS /dev/sdX3
+mount /dev/sdX3 /mnt
+for v in root System Applications Library Users private; do
+  btrfs subvolume create /mnt/$v
+done
+umount /mnt
+mount -o compress=zstd:1,subvol=root /dev/sdX3 /mnt
+mkdir -p /mnt/{System,Applications,Library,Users,private,Volumes,usr,lib,lib64,etc,var,tmp}
+for v in System Applications Library Users private; do
+  mount -o compress=zstd:1,subvol=$v /dev/sdX3 /mnt/$v
+done
+mkdir -p /mnt/private/stage/boot
+mount /dev/sdX2 /mnt/private/stage/boot
+pacstrap -K /mnt/private/stage filesystem glibc musl bash fish pacman util-linux kmod systemd linux linux-firmware mkinitcpio btrfs-progs grub efibootmgr sudo mesa</code></pre>
+
+<p>在 chroot 环境中完成基础配置后，将文件重组入 FasdeqOS 目录：</p>
+
+<pre><code>bsdtar -xpf fasdeqos-payload.tar.zst -C /mnt/private/stage
+bsdtar -cpf - -C /mnt/private/stage/usr . | bsdtar -xpf - -C /mnt/System
+rm -rf /mnt/private/stage/usr
+mv /mnt/private/stage/etc /mnt/private/etc
+mv /mnt/private/stage/var /mnt/private/var
+mv /mnt/private/stage/root /mnt/private/var/root
+rm -rf /mnt/private/stage</code></pre>
+</section>
+
+<section id="ch3">
+<h2>第 3 章 — 从 Arch 系系统迁移</h2>
+<p>支持从已安装的 <a href="https://archlinux.org/" target="_blank">Arch Linux</a>、<a href="https://manjaro.org/" target="_blank">Manjaro</a>、<a href="https://garudalinux.org/" target="_blank">Garuda</a>、<a href="https://cachyos.org/" target="_blank">CachyOS</a> 或 <a href="https://github.com/" target="_blank">Omarchy</a> 原地无损迁移至 FasdeqOS。</p>
+
+<h3>前提要求</h3>
+<ul>
+<li>基于 Arch Linux 的发行版。</li>
+<li>根分区为 Btrfs 文件系统。</li>
+<li>UEFI 模式且使用 Limine、GRUB 或 systemd-boot 引导器。</li>
+<li>Root 管理员权限。</li>
+</ul>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>模式</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><b>不备份（推荐）</b></td><td>GNU 工具替换为 chimerautils，应用迁入 <code>/Applications</code>，pacman 替换为 <code>pkg</code>，首次成功启动后清理旧系统文件。</td></tr>
+<tr><td><b>备份模式</b></td><td>数据克隆到 <code>/Users</code> 与新目录结构中，同时完整保留旧系统以便回滚。</td></tr>
+</tbody>
+</table>
+</div>
+
+<pre><code>curl -fsSL https://raw.githubusercontent.com/Fasdeq13/fasdeqOS/main/fasdeqos-migrate -o fasdeqos-migrate
+sudo -E bash fasdeqos-migrate</code></pre>
+<p>脚本源码：<a href="https://github.com/Fasdeq13/fasdeqOS/blob/main/fasdeqos-migrate" target="_blank">GitHub</a>。</p>
+</section>
+
+<section id="ch4">
+<h2>第 4 章 — Steam 与游戏配置</h2>
+<p>使用基于 <a href="https://cachyos.org/" target="_blank">CachyOS v3</a> 的 <a href="https://distrobox.it/" target="_blank">Distrobox</a> 容器运行 Steam 与游戏。</p>
+
+<h4>NVIDIA 显卡：</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --nvidia --additional-flags-create "--device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 -v /Users:/Users"</code></pre>
+
+<h4>AMD / Intel 显卡：</h4>
+<pre><code>distrobox create -i docker.io/cachyos/cachyos-v3:latest -n cachy-steam --additional-flags-create "--device /dev/dri -v /Users:/Users:rslave"</code></pre>
+
+<h4>安装并导出 Steam：</h4>
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu steam
+distrobox-export --app steam</code></pre>
+</section>
+
+<section id="ch5">
+<h2>第 5 章 — Wine 与 Windows 应用</h2>
+<p>在 <code>cachy-steam</code> 容器内配置 Wine 并将二进制程序导出到宿主机用户 PATH。</p>
+
+<pre><code>distrobox enter cachy-steam
+sudo pacman -Syu wine winetricks wine-mono wine-gecko lib32-gnutls --noconfirm
+distrobox-export --bin /usr/bin/wine --export-path ~/.local/bin
+distrobox-export --bin /usr/bin/winecfg --export-path ~/.local/bin
+distrobox-export --bin /usr/bin/winetricks --export-path ~/.local/bin</code></pre>
+
+<h4>创建桌面快捷方式：</h4>
+<pre><code>nano /Users/$USER/.local/share/applications/myapp.desktop</code></pre>
+
+<pre><code>[Desktop Entry]
+Name=My Windows Application
+Exec=distrobox-enter -n cachy-steam -- wine "/path/to/program.exe"
+Type=Application
+Terminal=false
+Categories=Game;</code></pre>
+</section>
+
+<section id="links">
+<h2>系统链接与源码</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>属性</th><th>URL</th></tr></thead>
+<tbody>
+<tr><td>主页地址</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>在线文档</td><td><a href="https://fasdeq13.github.io/fasdeq-os/#overview" target="_blank">https://fasdeq13.github.io/fasdeq-os/#overview</a></td></tr>
+<tr><td>技术支持</td><td><a href="https://fasdeq13.github.io/fasdeq-os/" target="_blank">https://fasdeq13.github.io/fasdeq-os/</a></td></tr>
+<tr><td>问题反馈</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/pulls" target="_blank">https://github.com/Fasdeq13/fasdeqOS/pulls</a></td></tr>
+<tr><td>源码仓库</td><td><a href="https://github.com/Fasdeq13/fasdeqOS/tree/main" target="_blank">https://github.com/Fasdeq13/fasdeqOS</a></td></tr>
+</tbody>
+</table>
+</div>
+</section>
 </div>
 
 </main>
@@ -828,7 +1094,7 @@ Categories=Game;</code></pre>
 
 <footer>
 <div class="f-wrap">
-<div><b>FasdeqOS Wiki & Handbook</b> — Built on Arch Linux & Linux Kernel. Rolling Release.</div>
+<div><b>FasdeqOS Handbook</b> — Built on Arch Linux & Linux Kernel. Rolling Release.</div>
 <div class="f-links">
 <a href="index.html">Main Website</a>
 <a href="https://fasdeq13.github.io/fasdeq-os/">Home URL</a>
@@ -862,9 +1128,9 @@ try {
   savedLang = localStorage.getItem("fasdeqos_hb_lang") || "";
 } catch(e) {}
 
-if (!savedLang || !["en", "ru", "it"].includes(savedLang)) {
+if (!savedLang || !["en", "ru", "it", "uk", "zh"].includes(savedLang)) {
   const navLang = (navigator.language || "en").slice(0, 2).toLowerCase();
-  savedLang = ["en", "ru", "it"].includes(navLang) ? navLang : "en";
+  savedLang = ["en", "ru", "it", "uk", "zh"].includes(navLang) ? navLang : "en";
 }
 
 setLang(savedLang);
